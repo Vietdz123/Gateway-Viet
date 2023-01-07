@@ -1,0 +1,7 @@
+""2022-12-22 10:43:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2022-12-22 10:43:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2022-12-22 10:43:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2022-12-22 10:43:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2022-12-22 10:43:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2022-12-22 10:44:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2022-12-22 10:44:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."

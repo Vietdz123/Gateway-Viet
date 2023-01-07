@@ -1,0 +1,49 @@
+sudo service mosquitto stop
+sudo systemctl stop mosquitto.service
+mosquitto -p 1884
+
+
+
+mosquitto_sub -t "v1/devices/me/telemetry" -p 1884
+mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"inf","params":{"TY":0,"EX":"0x00","ID":0}}'
+mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"inf","params":{"TY":0,"EX":"0x00","ID":0}}'
+mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"ControlLed","params":{"pin":3,"enabled":true}}'
+mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"dim1","params":20}'
+
+
+mosquitto_pub -d -q 1 -h "127.0.0.1" -p "1884" -t "/sensor/+/data" -m  "{"type": "double", "key": "temperature", "value": "20"}"
+mosquitto_sub -d -q 1 -h "127.0.0.1" -p "1884" -t "/sensor/+/data" 
+mosquitto_pub -h 127.0.0.1 -p 1884 -t "/sensor/data" -m '{"serialNumber": "Viet adu Gateway test", "sensorType": "default", "sensorModel": "T1000", "temp": 50, "hum": 99}'
+
+mosquitto_pub -d -q 1 -h "127.0.0.1" -p "1884" -t "/sensor/data" -m  "Hello"
+
+mosquitto_pub -d -q 1 -h "127.0.0.1" -p "1884" -t "v1/devices/me/rpc/request/1" -m  '{"TY":2, "ID":0, "ON":"0", "DI":30, "TI":10, "SE":100}'
+
+
+socat -d -d pty,raw,echo=0 pty,raw,echo=0
+echo  {\"TY\":2, \"ID\":0, \"ON\":"0", \"DI\":30, \"TI\":10, \"SE\":100} > /dev/pts/4
+
+
+mosquitto_pub -h 127.0.0.1 -p 1884 -t "/sensor/data" -m '{"serialNumber": "SN-001", "sensorType": "Thermometer", "sensorModel": "T1000", "temp": 42, "hum": 58}'
+
+
+
+
+
+{"method":"ControlLed","params":{"pin":1,"enabled":false,"Group":"1"}}` from v1/devices/me/rpc/request/6
+
+
+sudo su
+cd /dev
+chown viet  ttyUSB0
+
+
+{"method":"inf","params":{"TY":0,"EX":"0x00","ID":0}}
+{"TY": 0, "EX": "0x00", "ID": 0}
+{"method":"dim1","params":20}
+
+mosquitto_pub -h 127.0.0.1  -p 1884 -t "v1/devices/me/telemetry" -m '{"method":"inf","params":"{"TY":0,"EX":"0x00","ID":0}"}'
+
+mosquitto_pub -d -q 1 -h "127.0.0.1" -p "1883" -t "v1/devices/me/telemetry" -u "ufgVcklJD3yoKTWSBoa9" -m '{"TY": 0, "EX": "0x00", "ID": 0}'
+
+mosquitto_sub -d -q 1 -h "127.0.0.1" -p "1883" -t "v1/devices/me/telemetry" -u "ufgVcklJD3yoKTWSBoa9"s

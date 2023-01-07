@@ -1,0 +1,198 @@
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+HelloHello
+"
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+HelloHello
+"
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 96 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+HelloHello
+"
+""2023-01-01 10:58:09" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 97 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 68, in _convert_single_item
+    values = TBUtility.get_values(datatype_config["value"], data, datatype_config["type"],
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+Hello
+"
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+Hello
+"
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 96 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+Hello
+"
+""2023-01-01 10:58:14" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 97 - Expecting value: line 1 column 1 (char 0)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 68, in _convert_single_item
+    values = TBUtility.get_values(datatype_config["value"], data, datatype_config["type"],
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+{type: string, key: model, value: 20}
+"
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 142 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+{type: string, key: model, value: 20}
+"
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - parse_device_info - 143 - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 121, in parse_device_info
+    result_tags = TBUtility.get_values(expression, data, get_tag=True)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 96 - Error in converter, for config: 
+{"type": "json", "deviceNameJsonExpression": "${serialNumber}", "deviceTypeJsonExpression": "${sensorType}", "sendDataOnlyOnChange": false, "timeout": 60000, "attributes": [{"type": "string", "key": "model", "value": "${sensorModel}"}, {"type": "string", "key": "${sensorModel}", "value": "on"}], "timeseries": [{"type": "double", "key": "temperature", "value": "${temp}"}, {"type": "double", "key": "humidity", "value": "${hum}"}, {"type": "string", "key": "combine", "value": "${hum}:${temp}"}]}
+ and message: 
+{type: string, key: model, value: 20}
+"
+""2023-01-01 11:00:31" - |ERROR| - [json_mqtt_uplink_converter.py] - json_mqtt_uplink_converter - _convert_single_item - 97 - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/json_mqtt_uplink_converter.py", line 68, in _convert_single_item
+    values = TBUtility.get_values(datatype_config["value"], data, datatype_config["type"],
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in get_values
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 130, in <listcomp>
+    values = [TBUtility.get_value(exp, body, value_type=value_type, get_tag=get_tag,
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_utility.py", line 86, in get_value
+    body = loads(body)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "/home/viet/.local/lib/python3.10/site-packages/simplejson/decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)

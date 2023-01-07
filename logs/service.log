@@ -1,0 +1,143 @@
+""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-06 10:55:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-06 10:55:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-06 10:58:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-06 10:58:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-06 10:58:46" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-06 10:58:46" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 0, method: gateway_device_deleted"
+""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
+""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
+""2023-01-06 11:12:50" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
+    result = self.__rpc_gateway_processing(request_id, content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
+    result = method_function(arguments)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
+    self.__duplicate_detector.delete_device(deleted_device_name)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
+    del self._latest_data[device_name]
+KeyError: 'SN-001'
+""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 1, method: gateway_device_deleted"
+""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
+""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
+""2023-01-06 11:19:47" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
+    result = self.__rpc_gateway_processing(request_id, content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
+    result = method_function(arguments)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
+    self.__duplicate_detector.delete_device(deleted_device_name)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
+    del self._latest_data[device_name]
+KeyError: 'SN-001'
+""2023-01-06 11:58:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-06 11:58:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-06 12:07:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-06 12:07:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-06 14:28:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-06 14:28:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 4, method: gateway_device_deleted"
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: Viet adu Gateway test"
+""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'Viet adu Gateway test'"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
+    result = self.__rpc_gateway_processing(request_id, content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
+    result = method_function(arguments)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
+    self.__duplicate_detector.delete_device(deleted_device_name)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
+    del self._latest_data[device_name]
+KeyError: 'Viet adu Gateway test'
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 3, method: gateway_device_deleted"
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
+""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
+    result = self.__rpc_gateway_processing(request_id, content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
+    result = method_function(arguments)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
+    self.__duplicate_detector.delete_device(deleted_device_name)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
+    del self._latest_data[device_name]
+KeyError: 'SN-001'
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 2, method: gateway_device_deleted"
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
+""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: Viet-test-gateway"
+""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'Viet-test-gateway'"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
+    result = self.__rpc_gateway_processing(request_id, content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
+    result = method_function(arguments)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
+    self.__duplicate_detector.delete_device(deleted_device_name)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
+    del self._latest_data[device_name]
+KeyError: 'Viet-test-gateway'
+""2023-01-06 15:28:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-06 15:28:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
