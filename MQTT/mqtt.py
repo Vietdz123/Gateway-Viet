@@ -49,15 +49,32 @@ def connect_uart() -> mqtt_client:
     uart.connect('127.0.0.1', 1884)
     return uart
 
-def pushUpdateConfigureToThingsboard(TY, ON, DI,  TI, SE) :
+def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
     payload = init_responce()
     payload = add_json('TY', str(TY), payload)
+    payload = add_json('ID', str(ID), payload)
     payload = add_json('ON', str(ON), payload)
     payload = add_json('DI', str(DI), payload)
     payload = add_json('TI', str(TI), payload)
     payload = add_json('SE', str(SE), payload)
-    return payload    
+    return payload 
 
+def pushUpdateConfigureToDevice(TY, ID ,ON, DI,  TI) :
+    payload = init_responce()
+    payload = add_json('TY', str(TY), payload)
+    payload = add_json('ID', str(ID), payload)
+    payload = add_json('ON', str(ON), payload)
+    payload = add_json('DI', str(DI), payload)
+    payload = add_json('TI', str(TI), payload)
+    return payload      
+
+def pushUpdateInformationToDevice(TY, ID, EX) :
+    payload = init_responce()
+    payload = add_json('TY', str(TY), payload)
+    payload = add_json('ID', str(ID), payload)
+    payload = add_json('EX', str(EX), payload)
+    print(payload)
+    return payload    
 
 def convertData(data_uart: str) :
     print ('Data received through uart: ' + data_uart)
@@ -81,7 +98,7 @@ def convertData(data_uart: str) :
     
     if 'TY' in locals() and 'ID' in locals() and 'ON' in locals() and 'DI' in locals() and 'TI' in locals() and 'SE' in locals() :
         print('exist')
-        payload = pushUpdateConfigureToThingsboard(TY, ON, DI, TI, SE)
+        payload = pushUpdateConfigureToThingsboard(TY, ID, ON, DI, TI, SE)
         return ID, payload
     else: 
         ID = -102
@@ -104,7 +121,7 @@ def run_uart(client) :
                     print("data:" + data_uart)
                     
                     if data_uart.count('ID') != 0 and "TY" in data_uart and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
-                        payload = pushUpdateConfigureToThingsboard(data_uart_dic["TY"], data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
+                        payload = pushUpdateConfigureToThingsboard(data_uart_dic["TY"], data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
                         if data_uart_dic["ID"] == 0: 
                             print('Data uart ' + payload)
                             client[0].publish(TELEMETRY, payload)
@@ -166,7 +183,6 @@ def is_json(message) :
         data = json.loads(message)
         if isinstance(data, dict):
             a = json.dumps(data)
-            print(a)
             kq = a.count("{") - a.count("}") 
             if kq != 0 or a.count("\\") != 0 :
                 return None
@@ -180,31 +196,28 @@ def is_json(message) :
 
 def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
     try: 
-        if "TY" in z and "EX" in z and "ID" in z :
+        if z.count(inf) != 0 and "TY" in z and "EX" in z and "ID" in z :
             serial_uart = config_uart()
-            payload = y["params"]
-            str_payload = json.dumps(payload)
+            payload = pushUpdateInformationToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["EX"])
 
-            client.publish(TELEMETRY, str_payload)
-            client.publish(responce, str_payload)
+            client.publish(TELEMETRY, payload)
+            client.publish(responce, payload)
 
-            print('Set information: ' + str_payload)
-            str_payload = str_payload.encode("utf-8")
-
-            serial_uart.write(str_payload)
+            print('Set information: ' + payload)
+            payload = payload.encode("utf-8")
+            serial_uart.write(payload)
             
             
         elif z.count(conf) != 0 and "TY" in z and "ID" in z and "ON" in z and "DI" in z and "TI" in z:    
             serial_uart = config_uart()
-            payload = y["params"]
-            str_payload = json.dumps(payload)
+            payload = pushUpdateConfigureToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["ON"], y["params"]["DI"], y["params"]["TI"])
+            
+            client.publish(TELEMETRY, payload)
+            client.publish(responce, payload)
 
-            client.publish(TELEMETRY, str_payload)
-            client.publish(responce, str_payload)
-
-            print('Set configuration: ' + str_payload + ' from ' + responce)
-            str_payload = str_payload.encode("utf8")
-            serial_uart.write(str_payload)
+            print('Set configuration: ' + payload)
+            payload = payload.encode("utf8")
+            serial_uart.write(payload)
             
 
         elif z.count(pin) != 0 and "enabled" in z : #and "Group" in z:           
@@ -259,8 +272,7 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
 
             payload = payload_uart.encode("utf-8")
             serial_uart.write(payload) 
-            
-             
+                        
         else :
             default_notValid(client, responce)
     
