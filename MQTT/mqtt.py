@@ -14,11 +14,11 @@ import re
 
 message = {"method":"dim0","DI":43.33}
 
-broker= "127.0.0.1"   			        #host name
+#broker= "127.0.0.1"   			        #host name
 port = 1883 					            #data listening port
-ACCESS_TOKEN1 = 'ufgVcklJD3yoKTWSBoa9'    #Smart-lighting -VietPro -- Group Led 1
-ACCESS_TOKEN2 ='8rQoOpUxcBmUVkkZaVOb'   # viet : group Led 2 
-ACCESS_TOKEN3 = 'VPsng4Dk3KXh0NTKwhVt'   # Update infor
+# ACCESS_TOKEN1 = 'ufgVcklJD3yoKTWSBoa9'    #Smart-lighting -VietPro -- Group Led 1
+# ACCESS_TOKEN2 ='8rQoOpUxcBmUVkkZaVOb'   # viet : group Led 2 
+# ACCESS_TOKEN3 = 'VPsng4Dk3KXh0NTKwhVt'   # Update infor
 TELEMETRY = "v1/devices/me/telemetry"
 ATTRIBUTE = "v1/devices/me/attributes"
 topic = "v1/devices/me/rpc/request/+"
@@ -26,6 +26,11 @@ topic = "v1/devices/me/rpc/request/+"
 inf = 'inf'
 conf = 'conf'
 pin = 'pin'
+
+broker = "18.142.122.22"
+ACCESS_TOKEN1 = 'pxws00N2W6VWKQc1kTnC'    #Smart-lighting -VietPro -- Group Led 1
+ACCESS_TOKEN2 ='RJAkDkTtOJJmvfNGeC8x'   # viet : group Led 2 
+ACCESS_TOKEN3 = 'FlJRrrrrFFZs06ZVOdzr'   # Update infor
 
 #data_uart = {"TY":2, "ID": 1, "ON":"0", "DI":30, "TI":10, "SE":100}
 z1baudrate = 38400
