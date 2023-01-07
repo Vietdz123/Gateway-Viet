@@ -124,7 +124,6 @@ def run_uart(client) :
 
             else :
                 time.sleep(1)
-                #print("No Data")
                 
     else:
         print ('z1serial not open')
@@ -178,9 +177,6 @@ def is_json(message) :
             print("The message is not a valid JSON")
             return None
 
-def is_json2(string):
-  pattern = r'^\s*\{.*\}\s*$'
-  return re.match(pattern, string) is not None
 
 def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
     try: 
@@ -198,7 +194,7 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             serial_uart.write(str_payload)
             
             
-        elif z.count(conf) != 0 and "TY" in z and "ID" in y and "ON" in y and "DI" in y and "TI" in y:    
+        elif z.count(conf) != 0 and "TY" in z and "ID" in z and "ON" in z and "DI" in z and "TI" in z:    
             serial_uart = config_uart()
             payload = y["params"]
             str_payload = json.dumps(payload)
@@ -244,7 +240,6 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
 
             client.publish("v1/devices/me/telemetry", payload_uart)
             client.publish(responce, payload_uart)
-            client.publish(ATTRIBUTE, payload_uart)
 
             payload = payload_uart.encode("utf8")
             serial_uart.write(payload)
@@ -261,14 +256,12 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
 
             client.publish(TELEMETRY, payload_uart)  
             client.publish(responce, payload_uart)
-            client.publish(ATTRIBUTE, payload_uart)
 
             payload = payload_uart.encode("utf-8")
             serial_uart.write(payload) 
             
              
         else :
-            print('CAC')
             default_notValid(client, responce)
     
     except:
@@ -288,26 +281,23 @@ def subscribe(client: mqtt_client):
         print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
         isJson = is_json(msg.payload.decode())
         repsonTopic = str(msg.topic)
-
+        responce =  repsonTopic.replace("request", "response")
         if isJson == True :   
             y = json.loads(msg.payload.decode())                         #convert sang json  
             z = json.dumps(y)                                            #convert to string                       
-            responce =  repsonTopic.replace("request", "response")
             respond_message(z, y, responce, client)
         else :
-            print("else")
-            responce =  repsonTopic.replace("request", "response")
             default_notValid(client, responce)
         
     print("CALLBACK>>>>>>>>>>>>>>>>>>>>>>>>")
     payload = init_responce()
-    payload = add_json(1, "false", payload)
-    payload = add_json(2, "false", payload)
+    payload = add_json(1002, "false", payload)
+    payload = add_json(2002, "false", payload)
     client.on_message = on_message
     client.subscribe(topic)
 
-    client.publish(TELEMETRY, payload)
-    client.publish(ATTRIBUTE, payload)
+    # client.publish(TELEMETRY, payload)
+    # client.publish(ATTRIBUTE, payload)
     
 def run(client: mqtt_client) :
     client.loop_forever()
@@ -316,11 +306,7 @@ if __name__ == '__main__':
     client = connect_mqtt(ACCESS_TOKEN1)
     client1 = connect_mqtt(ACCESS_TOKEN2)
     client2 = connect_mqtt(ACCESS_TOKEN3)
-
-    # client = connect_uart()
-    # client1 = connect_uart()
-    # client2 = connect_uart()
-    
+   
     subscribe(client)
     subscribe(client1)
     subscribe(client2)
