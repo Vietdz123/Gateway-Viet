@@ -12,13 +12,11 @@ import time
 import serial
 import re
 
-message = {"method":"dim0","DI":43.33}
-
-#broker= "127.0.0.1"   			        #host name
+broker= "127.0.0.1"   			        #host name
 port = 1883 					            #data listening port
-# ACCESS_TOKEN1 = 'ufgVcklJD3yoKTWSBoa9'    #Smart-lighting -VietPro -- Group Led 1
-# ACCESS_TOKEN2 ='8rQoOpUxcBmUVkkZaVOb'   # viet : group Led 2 
-# ACCESS_TOKEN3 = 'VPsng4Dk3KXh0NTKwhVt'   # Update infor
+ACCESS_TOKEN1 = 'ufgVcklJD3yoKTWSBoa9'    #Smart-lighting -VietPro -- Group Led 1
+ACCESS_TOKEN2 ='8rQoOpUxcBmUVkkZaVOb'   # viet : group Led 2 
+ACCESS_TOKEN3 = 'VPsng4Dk3KXh0NTKwhVt'   # Update infor
 TELEMETRY = "v1/devices/me/telemetry"
 ATTRIBUTE = "v1/devices/me/attributes"
 topic = "v1/devices/me/rpc/request/+"
@@ -27,15 +25,31 @@ inf = 'inf'
 conf = 'conf'
 pin = 'pin'
 
-broker = "18.142.122.22"
-ACCESS_TOKEN1 = 'pxws00N2W6VWKQc1kTnC'    #Smart-lighting -VietPro -- Group Led 1
-ACCESS_TOKEN2 ='RJAkDkTtOJJmvfNGeC8x'   # viet : group Led 2 
-ACCESS_TOKEN3 = 'FlJRrrrrFFZs06ZVOdzr'   # Update infor
+# broker = "18.142.122.22"
+# ACCESS_TOKEN1 = 'pxws00N2W6VWKQc1kTnC'    #Smart-lighting -VietPro -- Group Led 1
+# ACCESS_TOKEN2 ='RJAkDkTtOJJmvfNGeC8x'   # viet : group Led 2 
+# ACCESS_TOKEN3 = 'FlJRrrrrFFZs06ZVOdzr'   # Update infor
 
-#data_uart = {"TY":2, "ID": 1, "ON":"0", "DI":30, "TI":10, "SE":100}
 z1baudrate = 38400
-#z1port = '/dev/pts/5'  # set the correct port before run it
-z1port = '/dev/pts/4'
+z1port = '/dev/pts/9'
+
+Group_Led_1 = "Group-Led-1"
+Group_Led_2 = "Group-Led-2"
+sensorTypeValue = "default"
+serialNumber = "serialNumber"
+sensorTypeKey = "sensorType"
+
+def default_messase_Group1() : 
+    payload = init_responce()
+    payload = add_json(serialNumber, Group_Led_1, payload)
+    payload = add_json(sensorTypeKey, sensorTypeValue, payload)
+    return payload
+
+def default_messase_Group2() : 
+    payload = init_responce()
+    payload = add_json(serialNumber, Group_Led_2, payload)
+    payload = add_json(sensorTypeKey, sensorTypeValue, payload)
+    return payload
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>> UART
 
@@ -49,10 +63,10 @@ def config_uart() :
     return serial_connection
 
 
-def connect_uart() -> mqtt_client:
-    uart = mqtt_client.Client()  
-    uart.connect('127.0.0.1', 1884)
-    return uart
+def connect_broker() -> mqtt_client:
+    client = mqtt_client.Client()  
+    client.connect('127.0.0.1', 1884)
+    return client
 
 def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
     payload = init_responce()
@@ -81,40 +95,42 @@ def pushUpdateInformationToDevice(TY, ID, EX) :
     print(payload)
     return payload    
 
-def convertData(data_uart: str) :
-    print ('Data received through uart: ' + data_uart)
-    result = re.findall(r"\b\w+:\s*\d+\b", data_uart)
+def publishTelemetryStatePin_to_broker(z: str, y: dict) : 
+    try: 
+        y = convert_boolean(z)
+        client = connect_broker()
+        print('D')
+        # if y["params"]["pin"] == 1 : 
+        payload = default_messase_Group1()
+        payload = add_json("enabled" + str(y["params"]["pin"]), y["params"]["enabled"], payload)
+        payload = check_state(payload, "true")                    #return JSON
+        
+        print('payload ' + payload)
+        
+        client.publish(TELEMETRY, payload)
 
-    for item in result:
-        key, value = item.split(':')
-        value = int(value)
-        if key == 'TY':
-            TY = value
-        elif key == 'ID':
-            ID = value
-        elif key == 'ON':
-            ON = value
-        elif key == 'DI':
-            DI = value
-        elif key == 'TI':
-            TI = value                        
-        elif key == 'SE':
-            SE = value
-    
-    if 'TY' in locals() and 'ID' in locals() and 'ON' in locals() and 'DI' in locals() and 'TI' in locals() and 'SE' in locals() :
-        print('exist')
-        payload = pushUpdateConfigureToThingsboard(TY, ID, ON, DI, TI, SE)
-        return ID, payload
-    else: 
-        ID = -102
+        # elif y["params"]["pin"] == 2 : 
+        #     payload = default_messase_Group2()
+        #     payload = add_json("enabled" + str(y["params"]["pin"]), y["params"]["enabled"], payload)
+        #     payload = check_state(payload, "true")                    #return JSON
+        #     print('payload ' + payload)
+        
+        #     client.publish(TELEMETRY, payload)
+
+        # else :
+        #     payload = init_responce()
+        #     payload = add_json("100", "true", payload)
+        #     print('Default')
+        #     client.publish(TELEMETRY, payload)
+    except:
         payload = init_responce()
-        return ID, payload
-
+        payload = add_json("100", "true", payload)
+        print('Default')
+        client.publish(TELEMETRY, payload)
 
 def run_uart(client) :
     z1serial = config_uart()
 
-    print ('Serial Opened')  # True for opened
     if z1serial.is_open:
         while True:
             size = z1serial.inWaiting()
@@ -154,23 +170,26 @@ def run_uart(client) :
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>> JSON
 
+def convert_boolean(json_string) : 
+    python_object = json.loads(json_string)
+    python_object['params']['enabled'] = str(python_object['params']['enabled']).lower()
+    return python_object
+
 def default_notValid(client: mqtt_client, responce) :
     payload = init_responce()
     payload = add_json("Key", "Json", payload)
     payload = add_json("Valid", "Not", payload)
-
+    print('Default')
     client.publish(ATTRIBUTE, payload)
     client.publish(responce, payload)   
 
 def check_state(fullstring: str, substring: str) :
     if fullstring.find(substring) != -1:
-        payload_telemetry =  {"STATE": "ON"}
-        payload_telemetry = json.dumps(payload_telemetry)       # return string
-        return payload_telemetry
+        fullstring = add_json("STATE", "ON", fullstring)
+        return fullstring
     else:
-        payload_telemetry =  {"STATE": "OFF"}
-        payload_telemetry = json.dumps(payload_telemetry)       # return string
-        return payload_telemetry    
+        fullstring = add_json("STATE", "OFF", fullstring)
+        return fullstring     
 
 def init_responce() :
     payload = "{}"
@@ -183,7 +202,6 @@ def add_json(key , value, responce: str):
     return payload
 
 def is_json(message) :
-    
     try:
         data = json.loads(message)
         if isinstance(data, dict):
@@ -225,26 +243,31 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             serial_uart.write(payload)
             
 
-        elif z.count(pin) != 0 and "enabled" in z : #and "Group" in z:           
+        elif z.count(pin) != 0 and "enabled" in z : #and "Group" in z:      
+            # y = convert_boolean(z)     
             serial_uart = config_uart()
             payload = init_responce()
-
+            print('A')
             payload = add_json(y["params"]["pin"], y["params"]["enabled"], payload)
-            payload_telemetry = check_state(payload, "true")                    #return JSON
-            print('Control Pin: ' + payload_telemetry)
-            print('payload ' + payload)
-            client.publish(ATTRIBUTE, payload)
-            client.publish(TELEMETRY, payload_telemetry)
+            print('B '+ payload)
             client.publish(responce, payload)
-
-            payload_uart = init_responce()
-            payload_uart = add_json("ID", y["params"]["pin"], payload_uart)
-            payload_uart = add_json("TY", 1, payload_uart)
-            payload_uart = add_json("ON", y["params"]["enabled"],payload_uart)
-            print('payload_uart control led: ' + payload_uart)
-            payload_uart = payload_uart.encode("utf8")
-            serial_uart.write(payload_uart)
+            publishTelemetryStatePin_to_broker(z, y)
+            print('C')
             
+            # y  = convert_boolean(z)  
+            # payload_uart = init_responce()
+            # payload_uart = add_json("ID", y["params"]["pin"], payload_uart)
+            # payload_uart = add_json("TY", 1, payload_uart)
+            # if str(y["params"]["enabled"]) == "true" :
+            #     payload_uart = add_json("ON", 1, payload_uart)
+            #     print('payload_uart control led: ' + payload_uart)
+            #     payload_uart = payload_uart.encode("utf8")
+            #     serial_uart.write(payload_uart)
+            # else :
+            #     payload_uart = add_json("ON", 0, payload_uart)
+            #     print('payload_uart control led: ' + payload_uart)
+            #     payload_uart = payload_uart.encode("utf8")
+            #     serial_uart.write(payload_uart)                
 
         elif y["method"] == "dim0" : 
             serial_uart = config_uart()
@@ -319,26 +342,34 @@ def subscribe(client: mqtt_client):
 def run(client: mqtt_client) :
     client.loop_forever()
 
+def on_message(client, userdata, message):
+    print("Received message:", message.payload.decode())
+
 if __name__ == '__main__':
+    client_broker = connect_broker()
+    client_broker.subscribe("test")
+    client_broker.on_message = on_message
+
     client = connect_mqtt(ACCESS_TOKEN1)
-    client1 = connect_mqtt(ACCESS_TOKEN2)
+    #client1 = connect_mqtt(ACCESS_TOKEN2)
     client2 = connect_mqtt(ACCESS_TOKEN3)
    
     subscribe(client)
-    subscribe(client1)
+    #subscribe(client1)
     subscribe(client2)
 
-    uart_client = [client, client1, client2]
+    uart_client = [client, client2]
 
     t1 = threading.Thread(target=run, args=(client,))
-    t2 = threading.Thread(target=run, args=(client1,))
+    #t2 = threading.Thread(target=run, args=(client1,))
     t3 = threading.Thread(target=run, args=(client2,))
     t4 = threading.Thread(target=run_uart, args=(uart_client,))
-    
+    t5 = threading.Thread(target=run, args=(client_broker,))
+
     t1.start()
-    t2.start()
+    #t2.start()
     t3.start()
     t4.start()
-
+    t5.start()
 
 

@@ -730,7 +730,7 @@ class MqttConnector(Connector, Thread):
     def __process_rpc_request(self, content, rpc_config):
         # This handler seems able to handle the request
         self.__log.info("Candidate RPC handler found")
-
+        print("HELLO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.")
         expects_response = rpc_config.get("responseTopicExpression")
         defines_timeout = rpc_config.get("responseTimeout")
 
@@ -807,7 +807,7 @@ class MqttConnector(Connector, Thread):
     @StatisticsService.CollectAllReceivedBytesStatistics(start_stat_type='allReceivedBytesFromTB')
     def server_side_rpc_handler(self, content):
         self.__log.info("Incoming server-side RPC: %s", content)
-
+        print("HAHAHA>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         rpc_method = content['data']['method']
 
         # check if RPC method is reserved get/set

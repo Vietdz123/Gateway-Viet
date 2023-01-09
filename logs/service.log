@@ -1,13 +1,13 @@
-""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
-""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
-""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
-""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:55:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
-""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:55:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
-""2023-01-06 10:55:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
-""2023-01-06 10:55:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+""2023-01-09 10:06:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:06:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:06:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:06:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:06:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:06:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:06:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:06:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:06:37" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:06:37" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
 
 [===UPDATE===]
 
@@ -15,18 +15,18 @@
 
 [===UPDATE===]
 "
-""2023-01-06 10:58:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
-""2023-01-06 10:58:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
-""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
-""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
-""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
-""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:58:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
-""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 10:58:45" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
-""2023-01-06 10:58:46" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
-""2023-01-06 10:58:46" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+""2023-01-09 10:09:39" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:09:39" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:09:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:09:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:09:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:09:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:09:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:09:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:09:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:09:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:09:56" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:09:56" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
 
 [===UPDATE===]
 
@@ -34,36 +34,18 @@
 
 [===UPDATE===]
 "
-""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 0, method: gateway_device_deleted"
-""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
-""2023-01-06 11:12:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
-""2023-01-06 11:12:50" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
-Traceback (most recent call last):
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
-    result = self.__rpc_gateway_processing(request_id, content)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
-    result = method_function(arguments)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
-    self.__duplicate_detector.delete_device(deleted_device_name)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
-    del self._latest_data[device_name]
-KeyError: 'SN-001'
-""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 1, method: gateway_device_deleted"
-""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
-""2023-01-06 11:19:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
-""2023-01-06 11:19:47" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
-Traceback (most recent call last):
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
-    result = self.__rpc_gateway_processing(request_id, content)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
-    result = method_function(arguments)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
-    self.__duplicate_detector.delete_device(deleted_device_name)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
-    del self._latest_data[device_name]
-KeyError: 'SN-001'
-""2023-01-06 11:58:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
-""2023-01-06 11:58:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+""2023-01-09 10:12:16" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:12:16" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:12:21" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:12:21" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:12:21" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:12:21" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:12:21" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:12:21" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:12:21" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:12:21" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:12:22" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:12:22" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
 
 [===UPDATE===]
 
@@ -71,18 +53,18 @@ KeyError: 'SN-001'
 
 [===UPDATE===]
 "
-""2023-01-06 12:07:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
-""2023-01-06 12:07:33" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
-""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
-""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
-""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
-""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 14:28:30" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
-""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
-""2023-01-06 14:28:30" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
-""2023-01-06 14:28:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
-""2023-01-06 14:28:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+""2023-01-09 10:12:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:12:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:16:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:16:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:16:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:16:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:16:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:16:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:16:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:16:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:16:10" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:16:10" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
 
 [===UPDATE===]
 
@@ -90,50 +72,18 @@ KeyError: 'SN-001'
 
 [===UPDATE===]
 "
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 4, method: gateway_device_deleted"
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: Viet adu Gateway test"
-""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'Viet adu Gateway test'"
-Traceback (most recent call last):
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
-    result = self.__rpc_gateway_processing(request_id, content)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
-    result = method_function(arguments)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
-    self.__duplicate_detector.delete_device(deleted_device_name)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
-    del self._latest_data[device_name]
-KeyError: 'Viet adu Gateway test'
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 3, method: gateway_device_deleted"
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: SN-001"
-""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'SN-001'"
-Traceback (most recent call last):
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
-    result = self.__rpc_gateway_processing(request_id, content)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
-    result = method_function(arguments)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
-    self.__duplicate_detector.delete_device(deleted_device_name)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
-    del self._latest_data[device_name]
-KeyError: 'SN-001'
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 974 - Received RPC request to the gateway, id: 2, method: gateway_device_deleted"
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __rpc_gateway_processing - 982 - Remote shell is disabled."
-""2023-01-06 14:31:48" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __process_deleted_gateway_devices - 430 - Received deleted gateway device notification: Viet-test-gateway"
-""2023-01-06 14:31:48" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 969 - 'Viet-test-gateway'"
-Traceback (most recent call last):
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 954, in _rpc_request_handler
-    result = self.__rpc_gateway_processing(request_id, content)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 996, in __rpc_gateway_processing
-    result = method_function(arguments)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 442, in __process_deleted_gateway_devices
-    self.__duplicate_detector.delete_device(deleted_device_name)
-  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/duplicate_detector.py", line 36, in delete_device
-    del self._latest_data[device_name]
-KeyError: 'Viet-test-gateway'
-""2023-01-06 15:28:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
-""2023-01-06 15:28:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+""2023-01-09 10:19:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:19:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:23:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:23:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:23:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:23:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:23:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:23:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:23:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:23:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:23:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:23:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
 
 [===UPDATE===]
 
@@ -141,3 +91,1202 @@ KeyError: 'Viet-test-gateway'
 
 [===UPDATE===]
 "
+""2023-01-09 10:29:55" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:29:55" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:30:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:30:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:30:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:30:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:30:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:30:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:30:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:30:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:30:16" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:30:16" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 10:34:03" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 10:34:03" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 10:34:07" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 10:34:07" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 10:34:07" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 10:34:07" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:34:07" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 10:34:07" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:34:07" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 10:34:07" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 10:34:08" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 10:34:08" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 11:00:41" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 11:00:41" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 11:00:46" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 11:00:46" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 11:00:46" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 11:00:46" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:00:46" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:00:46" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:00:46" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 11:00:46" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 11:00:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 11:00:47" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 11:05:56" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 11:05:56" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 11:05:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 11:05:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 11:05:58" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 11:05:58" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:05:58" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:05:58" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:05:58" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 11:05:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 11:05:59" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 11:05:59" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 11:08:02" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 11:08:02" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 11:08:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 11:08:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 11:08:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 11:08:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 11:08:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:05" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 11:08:05" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 11:08:05" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 11:08:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 11:08:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 11:08:13" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 11:08:13" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 11:08:13" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 11:08:13" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:13" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 11:08:13" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:13" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:13" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 11:08:13" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 11:08:13" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 11:08:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 11:08:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 11:08:27" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 11:08:27" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 11:08:27" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 11:08:27" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:27" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:27" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 11:08:27" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 11:08:27" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 11:08:28" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 11:08:28" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 12:37:45" - |WARNING| - [tb_updater.py] - tb_updater - check_for_new_version - 91 - Cannot connect to the update service. PLease check your internet connection."
+""2023-01-09 13:27:35" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 13:27:35" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 13:28:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 13:28:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 13:28:23" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 13:28:23" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 13:28:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 13:28:23" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 13:28:23" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 13:28:23" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 13:28:27" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 13:28:27" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 16:33:48" - |WARNING| - [tb_updater.py] - tb_updater - check_for_new_version - 91 - Cannot connect to the update service. PLease check your internet connection."
+""2023-01-09 16:38:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 16:38:41" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 16:38:54" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 16:38:54" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 16:38:54" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 16:38:54" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:38:54" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 16:38:55" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 16:38:55" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 16:42:54" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:42:54" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:42:54" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 16:45:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 16:45:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 16:45:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 16:45:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 16:45:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 16:45:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:45:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:45:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 16:45:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 16:45:32" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 16:45:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 16:45:33" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 17:45:34" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 17:45:34" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 17:47:26" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 17:47:26" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 17:53:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 17:53:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 17:53:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 17:53:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 17:53:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 17:53:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 17:53:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 17:53:29" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 17:53:30" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 17:53:30" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 18:08:24" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 18:08:24" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 18:08:37" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 18:08:37" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 18:08:37" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 18:08:37" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:08:37" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 18:08:37" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:08:37" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:08:37" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 18:08:38" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 18:08:38" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 18:12:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 18:12:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 18:12:49" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 18:12:49" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 18:12:49" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 18:12:49" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:12:49" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 18:12:49" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:12:49" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:12:49" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 18:12:50" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 18:12:50" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 18:13:41" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 18:43:34" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 18:43:34" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 18:43:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 18:43:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 18:43:40" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 18:43:40" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:43:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 18:43:40" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:43:40" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:43:40" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 18:43:41" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 18:43:41" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 18:45:10" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 18:45:10" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 18:46:44" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 18:46:44" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 18:46:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 18:46:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 18:46:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 18:46:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:46:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 18:46:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:46:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 18:46:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 18:46:48" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 18:46:48" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 19:28:49" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 19:28:49" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 19:28:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 19:28:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 19:28:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 19:28:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:28:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 19:28:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:28:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:28:50" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 19:28:51" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 19:28:51" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 19:48:54" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 19:48:54" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 19:48:56" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 19:48:56" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 19:48:56" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 19:48:56" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:48:56" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 19:48:56" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:48:56" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:48:56" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 19:48:57" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 19:48:57" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 19:54:27" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 366 - Stopping..."
+""2023-01-09 19:54:27" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 375 - The gateway has been stopped."
+""2023-01-09 19:54:28" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 149 - Gateway starting..."
+""2023-01-09 19:54:28" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 154 - ThingsBoard IoT gateway version: 3.2"
+""2023-01-09 19:54:28" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-01-09 19:54:28" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:54:28" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 263 - Gateway started."
+""2023-01-09 19:54:28" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:54:28" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-01-09 19:54:28" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-01-09 19:54:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 19:54:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 20:07:22" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 20:08:08" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 20:10:44" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 20:16:33" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 20:54:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 20:54:31" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 21:12:31" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 21:15:43" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 21:19:45" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 21:54:32" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 21:54:32" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 21:59:12" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:03:30" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:06:34" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:06:35" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:08:33" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:08:42" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:09:01" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:09:02" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:09:47" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:11:01" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:11:27" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:13:13" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:16:13" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:16:33" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:19:06" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:23:49" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:27:33" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:27:49" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:28:07" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:31:32" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:35:12" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:36:32" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:45:35" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:47:27" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:49:43" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:53:11" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:53:57" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:54:34" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 84 - v3.2"
+""2023-01-09 22:54:34" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-01-09 22:55:27" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
+""2023-01-09 22:55:56" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - _rpc_request_handler - 971 - nothing to repeat at position 0"
+Traceback (most recent call last):
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 933, in _rpc_request_handler
+    connector_name.server_side_rpc_handler(content)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/gateway/statistics_service.py", line 121, in inner
+    func(*args, **kwargs)
+  File "/home/viet/working_space/mqtt-thingsboard/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 830, in server_side_rpc_handler
+    and search(rpc_config["methodFilter"], rpc_method) is not None:
+  File "/usr/lib/python3.10/re.py", line 200, in search
+    return _compile(pattern, flags).search(string)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 669, in _parse
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 0
