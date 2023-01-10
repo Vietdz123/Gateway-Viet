@@ -1,0 +1,5 @@
+""2023-01-10 00:10:35" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-01-10 00:10:35" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 2 for device *"
+""2023-01-10 00:33:32" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_unsubscribe - 193 - Unsubscribed from *|*, subscription id '*'"
+""2023-01-10 00:51:09" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-01-10 00:51:10" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 2 for device *"

@@ -10,22 +10,17 @@ from threading import Thread
 import threading
 
 
-def check_state(fullstring: str, substring: str) :
-    if fullstring.find(substring) != -1:
-        payload_telemetry =  {"STATE": "ON"}
-        payload_telemetry = json.dumps(payload_telemetry)       # return string
-        return payload_telemetry
-    else:
-        payload_telemetry =  {"STATE": "OFF"}
-        payload_telemetry = json.dumps(payload_telemetry)       # return string
-        return payload_telemetry    
+import json
 
-def init_responce() :
-    payload = "{}"
-    return payload
+data = {'pin': 1, 'enabled': True}
 
-def add_json(key , value, responce: str):
-    json_responce = json.loads(responce)
-    json_responce[key] = value
-    payload = json.dumps(json_responce)
-    return payload
+# Convert the dictionary to a JSON string
+json_string = json.dumps(data)
+
+# Split the string into a list of substrings
+pairs = json_string.split(", ")
+
+# Print the key-value pairs
+for pair in pairs:
+    (key, value) = pair
+    print(key + ' ' + value)

@@ -49,8 +49,10 @@ def publishTelemetryStatePin_to_broker(z: str, y: dict) :
     print("A")
     y = convert_boolean(z)
     client = mqtt_client.Client() 
-    client.connect(broker, port)
+    client.connect(broker, 1884)
     client.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "enabled2": "false", "STATE": "ON"}')
+    del client
+    print("F")
     # if y["params"]["pin"] == 1 : 
     #     payload = default_messase_Group1()
 

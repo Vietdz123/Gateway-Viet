@@ -31,7 +31,7 @@ pin = 'pin'
 # ACCESS_TOKEN3 = 'FlJRrrrrFFZs06ZVOdzr'   # Update infor
 
 z1baudrate = 38400
-z1port = '/dev/pts/9'
+z1port = '/dev/pts/4'
 
 Group_Led_1 = "Group-Led-1"
 Group_Led_2 = "Group-Led-2"
@@ -95,20 +95,32 @@ def pushUpdateInformationToDevice(TY, ID, EX) :
     print(payload)
     return payload    
 
-def publishTelemetryStatePin_to_broker(z: str, y: dict) : 
+def publishTelemetryStatePin_to_broker(z: str, y: dict, responce, payload_responce) : 
     try: 
+        print('E')
         y = convert_boolean(z)
-        client = connect_broker()
+        client = mqtt_client.Client()  
+        client.connect('127.0.0.1', 1884)
         print('D')
-        # if y["params"]["pin"] == 1 : 
         payload = default_messase_Group1()
         payload = add_json("enabled" + str(y["params"]["pin"]), y["params"]["enabled"], payload)
         payload = check_state(payload, "true")                    #return JSON
         
         print('payload ' + payload)
         
-        client.publish(TELEMETRY, payload)
-
+        #client.publish(TELEMETRY, payload)
+        print(responce + ' >> ' + payload_responce)
+        #client.publish(responce, payload_responce)
+  
+        # if y["params"]["pin"] == 1 : 
+        #     payload = default_messase_Group1()
+        #     payload = add_json("enabled" + str(y["params"]["pin"]), y["params"]["enabled"], payload)
+        #     payload = check_state(payload, "true")                    #return JSON
+            
+        #     print('payload ' + payload)
+            
+        #     client.publish(TELEMETRY, payload)
+        #     del client
         # elif y["params"]["pin"] == 2 : 
         #     payload = default_messase_Group2()
         #     payload = add_json("enabled" + str(y["params"]["pin"]), y["params"]["enabled"], payload)
@@ -116,17 +128,20 @@ def publishTelemetryStatePin_to_broker(z: str, y: dict) :
         #     print('payload ' + payload)
         
         #     client.publish(TELEMETRY, payload)
-
+        #     del client
         # else :
         #     payload = init_responce()
         #     payload = add_json("100", "true", payload)
         #     print('Default')
         #     client.publish(TELEMETRY, payload)
+        #     del client
     except:
+        client = connect_broker()
         payload = init_responce()
         payload = add_json("100", "true", payload)
         print('Default')
         client.publish(TELEMETRY, payload)
+        del client
 
 def run_uart(client) :
     z1serial = config_uart()
@@ -248,11 +263,13 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             serial_uart = config_uart()
             payload = init_responce()
             print('A')
-            payload = add_json(y["params"]["pin"], y["params"]["enabled"], payload)
+            payload_responce = add_json(y["params"]["pin"], y["params"]["enabled"], payload)
             print('B '+ payload)
-            client.publish(responce, payload)
-            publishTelemetryStatePin_to_broker(z, y)
+            
+            publishTelemetryStatePin_to_broker(z, y, responce, payload_responce)
             print('C')
+            # client = connect_mqtt(ACCESS_TOKEN1)
+            #client.publish(responce, payload)
             
             # y  = convert_boolean(z)  
             # payload_uart = init_responce()
@@ -342,13 +359,9 @@ def subscribe(client: mqtt_client):
 def run(client: mqtt_client) :
     client.loop_forever()
 
-def on_message(client, userdata, message):
-    print("Received message:", message.payload.decode())
 
 if __name__ == '__main__':
-    client_broker = connect_broker()
-    client_broker.subscribe("test")
-    client_broker.on_message = on_message
+
 
     client = connect_mqtt(ACCESS_TOKEN1)
     #client1 = connect_mqtt(ACCESS_TOKEN2)
@@ -364,12 +377,10 @@ if __name__ == '__main__':
     #t2 = threading.Thread(target=run, args=(client1,))
     t3 = threading.Thread(target=run, args=(client2,))
     t4 = threading.Thread(target=run_uart, args=(uart_client,))
-    t5 = threading.Thread(target=run, args=(client_broker,))
 
     t1.start()
     #t2.start()
     t3.start()
     t4.start()
-    t5.start()
 
 
