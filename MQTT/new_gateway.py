@@ -35,7 +35,7 @@ z1baudrate = 38400
 z1port = '/dev/pts/4'
 
 def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
-    payload = init_responce()
+    payload = default_messase_Group1()
     payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
     payload = add_json('ON', str(ON), payload)
@@ -45,7 +45,7 @@ def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
     return payload 
 
 def pushUpdateConfigureToDevice(TY, ID ,ON, DI,  TI) :
-    payload = init_responce()
+    payload = default_messase_Group1()
     payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
     payload = add_json('ON', str(ON), payload)
@@ -54,12 +54,13 @@ def pushUpdateConfigureToDevice(TY, ID ,ON, DI,  TI) :
     return payload      
 
 def pushUpdateInformationToDevice(TY, ID, EX) :
-    payload = init_responce()
+    payload = default_messase_Group1()
     payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
     payload = add_json('EX', str(EX), payload)
     print(payload)
     return payload  
+
 
 
 def config_uart() :
@@ -71,7 +72,37 @@ def config_uart() :
                                     timeout=1)
     return serial_connection
 
+def run_uart(client: mqtt_client) :
+    z1serial = config_uart()
 
+    if z1serial.is_open:
+        while True:
+            size = z1serial.inWaiting()
+            if size:
+                try:
+                    data_uart = z1serial.readline(size)
+                    print("A")
+                    data_uart = data_uart.decode()
+                    print("B")
+                    print(data_uart)
+                    data_uart_dic = json.loads(data_uart)
+                    print("C")
+                    if data_uart.count('ID') != 0 and "TY" in data_uart and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
+                        payload = pushUpdateConfigureToThingsboard(data_uart_dic["TY"], data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
+                        
+                        client.publish(TELEMETRY, payload)
+
+                    else :
+                        print("Data Received Through UART Not Valid")              
+                except:
+                    print("Data Received Through UART Not Valid except")  
+
+            else :
+                time.sleep(1)
+                
+    else:
+        print ('z1serial not open')
+        
 def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
     try: 
         if z.count(inf) != 0 and "TY" in z and "EX" in z and "ID" in z :
@@ -85,7 +116,7 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             payload = payload.encode("utf-8")
             serial_uart.write(payload)
             
-            
+        #Dieu khien cac thong so cho Led
         elif z.count(conf) != 0 and "TY" in z and "ID" in z and "ON" in z and "DI" in z and "TI" in z:    
             serial_uart = config_uart()
             payload = pushUpdateConfigureToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["ON"], y["params"]["DI"], y["params"]["TI"])
@@ -97,8 +128,8 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             payload = payload.encode("utf8")
             serial_uart.write(payload)
             
-
-        elif z.count(pin) != 0 and "enabled" in z : #and "Group" in z:  
+        #Dieu khien tat bat led
+        elif z.count(pin) != 0 and "enabled" in z :          
             
             print("Controled PIN >>>>>>>>")    
             serial_uart = config_uart()
@@ -128,37 +159,39 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
                 payload_uart = payload_uart.encode("utf8")
                 serial_uart.write(payload_uart)                
 
-        elif y["method"] == "dim0" : 
-            serial_uart = config_uart()
-            payload_uart = init_responce()
+        #Dieu khien Dim Led
+        elif "dim" in y["method"] or y["method"].find("dim")!=-1 :
+            try :
+                index = y["method"].find("dim")
+                numberDim = y["method"][index+3:]
+                numberDim = int(numberDim) 
+                value_params = y["params"]
+
+                value_params = float(value_params)
+                a = isinstance(value_params, float)
+                if a == True :
+                    serial_uart = config_uart()
+                    payload_responce_thingsboard = default_messase_Group1()
+                    payload_responce_thingsboard = add_json("ID", numberDim, payload_responce_thingsboard)
+                    #payload_responce_thingsboard = add_json("TY", 1, payload_responce_thingsboard)
+                    payload_responce_thingsboard = add_json('DI', value_params, payload_responce_thingsboard)                    
+
+                    client.publish(TELEMETRY, payload_responce_thingsboard)  
+                    client.publish(responce, payload_responce_thingsboard)
+
+                    payload_uart = init_responce()
+                    payload_uart = add_json("ID", numberDim, payload_uart)
+                    #payload_uart = add_json("TY", 1, payload_uart)
+                    payload_uart = add_json('DI', value_params, payload_uart)
+                    print('payload_uart control dim: ' + payload_uart)
+                    payload = payload_uart.encode("utf-8")
+                    serial_uart.write(payload) 
                 
-            payload_uart = add_json("ID", 0, payload_uart)
-            payload_uart = add_json("TY", 1, payload_uart)
-            payload_uart = add_json("DI", y["params"], payload_uart)
-
-            print('Payload_uart control dim: ' + payload_uart)
-
-            client.publish("v1/devices/me/telemetry", payload_uart)
-            client.publish(responce, payload_uart)
-
-            payload = payload_uart.encode("utf8")
-            serial_uart.write(payload)
+                else :
+                    default_notValid()
             
-
-        elif y["method"] == "dim1" : 
-            serial_uart = config_uart()
-            payload_uart = init_responce()
-                
-            payload_uart = add_json("ID", 1, payload_uart)
-            payload_uart = add_json("TY", 1, payload_uart)
-            payload_uart = add_json('DI', str(y["params"]), payload_uart)
-            print('payload_uart control dim: ' + payload_uart)
-
-            client.publish(TELEMETRY, payload_uart)  
-            client.publish(responce, payload_uart)
-
-            payload = payload_uart.encode("utf-8")
-            serial_uart.write(payload) 
+            except :
+                default_notValid()
                         
         else :
             default_notValid(client, responce)
@@ -211,6 +244,7 @@ def is_json(message) :
             a = json.dumps(data)
             kq = a.count("{") - a.count("}") 
             if kq != 0 or a.count("\\") != 0 :
+                print("Not valid Format")
                 return None
             return True
         else:
@@ -265,10 +299,16 @@ def subscribe(client: mqtt_client):
 
 if __name__ == '__main__':
     client = connect_mqtt()
+    client_uart = connect_mqtt()
+
+    client.publish(topic_connect, connect_group1())
+    client.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
 
     subscribe(client)
     t1 = threading.Thread(target=run, args=(client,))
+    t2 = threading.Thread(target=run_uart, args=(client_uart,))
     t1.start()
+    t2.start()
     while True : 
         time.sleep(10)
         client.publish(TELEMETRY, '{"serialNumber": "Group-Led-2", "sensorType": "default", "trash": "trash"}')
