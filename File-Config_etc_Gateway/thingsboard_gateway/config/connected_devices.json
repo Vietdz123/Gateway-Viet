@@ -1,0 +1,18 @@
+{
+  "SN-001": [
+    "MQTT Broker Connector",
+    "Thermometer"
+  ],
+  "Viet Gateway test": [
+    "MQTT Broker Connector",
+    "default"
+  ],
+  "Viet adu Gateway test": [
+    "MQTT Broker Connector",
+    "default"
+  ],
+  "Viet-test-gateway": [
+    "MQTT Broker Connector",
+    "Thermometer"
+  ]
+}
