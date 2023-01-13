@@ -18,7 +18,6 @@ port = 1884
 TELEMETRY = "v1/devices/me/telemetry"
 ATTRIBUTE = "v1/devices/me/attributes"
 topic_connect = "sensor/connect"
-
 topic = 'v1/device/+/request/+/+'
 
 inf = 'inf'
@@ -26,14 +25,14 @@ conf = 'conf'
 pin = 'pin'
 
 Group_Led_1 = "Group-Led-1"
-Group_Led_2 = "Group-Led-2"
 sensorTypeValue = "default"
 serialNumber = "serialNumber"
 sensorTypeKey = "sensorType"
 
 z1baudrate = 38400
-z1port = '/dev/pts/4'
+z1port = '/dev/pts/3'
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Helpers
 def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
     payload = default_messase_Group1()
     payload = add_json('TY', str(TY), payload)
@@ -44,7 +43,7 @@ def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
     payload = add_json('SE', str(SE), payload)
     return payload 
 
-def pushUpdateConfigureToDevice(TY, ID ,ON, DI,  TI) :
+def pushUpdateConfigureToDevice(TY, ID , ON, DI,  TI) :
     payload = default_messase_Group1()
     payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
@@ -58,11 +57,84 @@ def pushUpdateInformationToDevice(TY, ID, EX) :
     payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
     payload = add_json('EX', str(EX), payload)
-    print(payload)
     return payload  
 
+def default_notValid(client: mqtt_client, responce) :
+    payload = default_messase_Group1()
+    payload = add_json("Key", "Json", payload)
+    payload = add_json("Valid", "Not", payload)
 
+    client.publish(ATTRIBUTE, payload)
+    client.publish(responce, payload)   
 
+def check_state(fullstring: str, substring: str) :  
+    if fullstring.find(substring) != -1:
+        fullstring = add_json("STATE", "ON", fullstring)
+        return fullstring
+    else:
+        fullstring = add_json("STATE", "OFF", fullstring)
+        return fullstring    
+
+def is_json(message) :
+    try:
+        data = json.loads(message)
+        if isinstance(data, dict):
+            a = json.dumps(data)
+            kq = a.count("{") - a.count("}") 
+            if kq != 0 or a.count("\\") != 0 :
+                print("Not valid Format")
+                return None
+            return True
+        else:
+            return  None
+    except json.JSONDecodeError:
+            print("The message is not a valid JSON")
+            return None
+
+def init_responce() :
+    payload = "{}"
+    return payload
+
+def add_json(key , value, responce: str):
+    json_responce = json.loads(responce)
+    json_responce[key] = value
+    payload = json.dumps(json_responce)
+    return payload
+
+def convert_boolean(json_string) : 
+    python_object = json.loads(json_string)
+    python_object['enabled'] = str(python_object['enabled']).lower()
+    return python_object
+
+def checkTypeMessage(ID = 0, TY = 0, ON = 0, DI = 10.5, TI = 5, SE = 6, EX = "0x12") : 
+    EX = int(EX, 16)
+    EX = hex(EX)    # Check is hex or not
+    if isinstance(ID, int) and isinstance(TY, int) and isinstance(ON, int) and isinstance(DI, (float, int)) and isinstance(TI, int) :
+        return True
+    else :
+        print("Not Type")
+        return None
+
+def checkValidMessage(TY = 0, ON = 1, DI = 50.5, TI = 10, SE = 100) : 
+    print(  TY + DI + TI + SE + SE)
+    if TY != 0 and TY != 1 :
+        return None
+
+    if ON != 0 and ON != 1 :
+        return None
+
+    if DI < 0 or DI > 100:
+        return None
+    
+    if TI < 10 :
+        return None
+    
+    if SE < 0:
+        return None
+    
+    return True
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> UART
 def config_uart() :
     serial_connection = serial.Serial(port=z1port,
                                     baudrate = z1baudrate,
@@ -81,12 +153,10 @@ def run_uart(client: mqtt_client) :
             if size:
                 try:
                     data_uart = z1serial.readline(size)
-                    print("A")
                     data_uart = data_uart.decode()
-                    print("B")
                     print(data_uart)
+                    
                     data_uart_dic = json.loads(data_uart)
-                    print("C")
                     if data_uart.count('ID') != 0 and "TY" in data_uart and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
                         payload = pushUpdateConfigureToThingsboard(data_uart_dic["TY"], data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
                         
@@ -102,10 +172,21 @@ def run_uart(client: mqtt_client) :
                 
     else:
         print ('z1serial not open')
-        
+
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Hanlde Responce RPC To Thingsboard and Send Configure to Device
 def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
     try: 
         if z.count(inf) != 0 and "TY" in z and "EX" in z and "ID" in z :
+            check = checkTypeMessage(ID = y["params"]["ID"], TY = y["params"]["TY"], EX = y["params"]["EX"])
+            if check == None :
+                default_notValid(client, responce)
+                return
+            check = checkValidMessage(TY = y["params"]["TY"])
+            if check == None :
+                default_notValid(client, responce)
+                return
+
             serial_uart = config_uart()
             payload = pushUpdateInformationToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["EX"])
 
@@ -118,6 +199,16 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             
         #Dieu khien cac thong so cho Led
         elif z.count(conf) != 0 and "TY" in z and "ID" in z and "ON" in z and "DI" in z and "TI" in z:    
+            check = checkTypeMessage(ID = y["params"]["ID"], TY = y["params"]["TY"], ON = y["params"]["ON"], DI = y["params"]["DI"], TI = y["params"]["TI"])
+            if check == None :
+                default_notValid(client, responce)
+                return
+            check = checkValidMessage(TY = y["params"]["TY"], ON = y["params"]["ON"], DI = y["params"]["DI"], TI = y["params"]["TI"])
+            if check == None :
+                default_notValid(client, responce)
+                return
+            
+            
             serial_uart = config_uart()
             payload = pushUpdateConfigureToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["ON"], y["params"]["DI"], y["params"]["TI"])
             
@@ -129,9 +220,7 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             serial_uart.write(payload)
             
         #Dieu khien tat bat led
-        elif z.count(pin) != 0 and "enabled" in z :          
-            
-            print("Controled PIN >>>>>>>>")    
+        elif z.count(pin) != 0 and "enabled" in z :           
             serial_uart = config_uart()
             
             payload = default_messase_Group1()
@@ -188,10 +277,10 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
                     serial_uart.write(payload) 
                 
                 else :
-                    default_notValid()
+                    default_notValid(client, responce)
             
             except :
-                default_notValid()
+                default_notValid(client, responce)
                         
         else :
             default_notValid(client, responce)
@@ -200,16 +289,16 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
         default_notValid(client, responce)        
 
 
-
-
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Connect Broker and Thingsboard
 def connect_group1() :
     payload = init_responce()
     payload = add_json("SerialNumber", Group_Led_1, payload)
     return payload
 
-def connect_group2() :
+def default_messase_Group1() : 
     payload = init_responce()
-    payload = add_json("SerialNumber", Group_Led_2, payload)
+    payload = add_json(serialNumber, Group_Led_1, payload)
+    payload = add_json(sensorTypeKey, sensorTypeValue, payload)
     return payload
 
 def connect_mqtt() -> mqtt_client:
@@ -219,61 +308,6 @@ def connect_mqtt() -> mqtt_client:
 
 def run(client: mqtt_client) :
     client.loop_forever()
-
-
-def default_notValid(client: mqtt_client, responce) :
-    payload = init_responce()
-    payload = add_json("Key", "Json", payload)
-    payload = add_json("Valid", "Not", payload)
-
-    client.publish(ATTRIBUTE, payload)
-    client.publish(responce, payload)   
-
-def check_state(fullstring: str, substring: str) :
-    if fullstring.find(substring) != -1:
-
-        fullstring = add_json("STATE", "ON", fullstring)
-        return fullstring
-    else:
-        fullstring = add_json("STATE", "OFF", fullstring)
-        return fullstring    
-def is_json(message) :
-    try:
-        data = json.loads(message)
-        if isinstance(data, dict):
-            a = json.dumps(data)
-            kq = a.count("{") - a.count("}") 
-            if kq != 0 or a.count("\\") != 0 :
-                print("Not valid Format")
-                return None
-            return True
-        else:
-            return  None
-    except json.JSONDecodeError:
-            print("The message is not a valid JSON")
-            return None
-
-def init_responce() :
-    payload = "{}"
-    return payload
-
-def add_json(key , value, responce: str):
-    json_responce = json.loads(responce)
-    json_responce[key] = value
-    payload = json.dumps(json_responce)
-    return payload
-
-
-def convert_boolean(json_string) : 
-    python_object = json.loads(json_string)
-    python_object['enabled'] = str(python_object['enabled']).lower()
-    return python_object
-
-def default_messase_Group1() : 
-    payload = init_responce()
-    payload = add_json(serialNumber, Group_Led_1, payload)
-    payload = add_json(sensorTypeKey, sensorTypeValue, payload)
-    return payload
 
 def subscribe(client: mqtt_client):
     def on_message(client, userdata, msg):
@@ -288,14 +322,10 @@ def subscribe(client: mqtt_client):
         else :
             default_notValid(client, responce)
 
-
     client.on_message = on_message
-    
     client.subscribe(topic)
     client.publish(topic_connect, connect_group1())
     client.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
-    client.publish(topic_connect, connect_group2())
-    client.publish(TELEMETRY, '{"serialNumber": "Group-Led-2", "sensorType": "default", "trash": "trash"}')
 
 if __name__ == '__main__':
     client = connect_mqtt()
@@ -305,12 +335,14 @@ if __name__ == '__main__':
     client.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
 
     subscribe(client)
+
     t1 = threading.Thread(target=run, args=(client,))
     t2 = threading.Thread(target=run_uart, args=(client_uart,))
     t1.start()
     t2.start()
-    while True : 
-        time.sleep(10)
-        client.publish(TELEMETRY, '{"serialNumber": "Group-Led-2", "sensorType": "default", "trash": "trash"}')
 
+    while True : 
+        time.sleep(20)
+        client.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
+        client_uart.publish(TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
     

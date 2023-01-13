@@ -1,3 +1,5 @@
+
+
 #     Copyright 2022. ThingsBoard
 #
 #     Licensed under the Apache License, Version 2.0 (the "License");
@@ -315,6 +317,7 @@ class MqttConnector(Connector, Thread):
         message = self._client.subscribe(topic, qos)
         try:
             self.__subscribes_sent[message[1]] = topic
+            print("Subcribe >>>>>>>>>>>>>>>>.")
         except Exception as e:
             self.__log.exception(e)
 
@@ -826,9 +829,9 @@ class MqttConnector(Connector, Thread):
         else:
             # Check whether one of my RPC handlers can handle this request
             for rpc_config in self.__server_side_rpc:
-                if search(rpc_config["deviceNameFilter"], content["device"]) \
-                        and search(rpc_config["methodFilter"], rpc_method) is not None:
-
+                # if search(rpc_config["deviceNameFilter"], content["device"]) \
+                #         and search(rpc_config["methodFilter"], rpc_method) is not None:
+                    print("KAKAKAKAK >>>>>>>")
                     return self.__process_rpc_request(content, rpc_config)
 
             self.__log.error("RPC not handled: %s", content)
