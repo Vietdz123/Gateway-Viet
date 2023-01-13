@@ -16,7 +16,7 @@
   },
   "mapping": [
     {
-      "topicFilter": "/sensor/data",
+      "topicFilter": "v1/devices/me/telemetry",
       "converter": {
         "type": "json",
         "deviceNameJsonExpression": "${serialNumber}",
@@ -26,31 +26,83 @@
         "attributes": [
           {
             "type": "string",
-            "key": "model",
-            "value": "${sensorModel}"
+            "key": "1",
+            "value": "${enabled1}"
           },
           {
             "type": "string",
-            "key": "${sensorModel}",
-            "value": "on"
+            "key": "2",
+            "value": "${enabled2}"
+          },
+          {
+            "type": "string",
+            "key": "3",
+            "value": "${enabled3}"
+          },
+          {
+            "type": "string",
+            "key": "4",
+            "value": "${enabled4}"
+          },
+          {
+            "type": "string",
+            "key": "5",
+            "value": "${enabled5}"
+          },
+          {
+            "type": "string",
+            "key": "6",
+            "value": "${enabled6}"
           }
+          
         ],
         "timeseries": [
           {
             "type": "double",
-            "key": "temperature",
-            "value": "${temp}"
-          },
-          {
-            "type": "double",
-            "key": "humidity",
-            "value": "${hum}"
+            "key": "Type",
+            "value": "${TY}"
           },
           {
             "type": "string",
-            "key": "combine",
-            "value": "${hum}:${temp}"
-          }
+            "key": "Extended Address",
+            "value": "${EX}"
+          },
+          {
+            "type": "double",
+            "key": "ID",
+            "value": "${ID}"
+          },
+          {
+            "type": "double",
+            "key": "ON",
+            "value": "${ON}"
+          },
+          {
+            "type": "double",
+            "key": "Dim",
+            "value": "${DI}"
+          },
+          {
+            "type": "double",
+            "key": "Time",
+            "value": "${TI}"
+          },
+          {
+            "type": "string",
+            "key": "Sensor",
+            "value": "${SE}"
+          },          
+          {
+            "type": "string",
+            "key": "STATE",
+            "value": "${STATE}"
+          },        
+          {
+            "type": "string",
+            "key": "trash",
+            "value": "${trash}"
+          }                                              
+
         ]
       }
     },
@@ -162,16 +214,10 @@
   "serverSideRpc": [
     {
       "deviceNameFilter": ".*",
-      "methodFilter": "echo",
-      "requestTopicExpression": "sensor/${deviceName}/request/${methodName}/${requestId}",
-      "responseTopicExpression": "sensor/${deviceName}/response/${methodName}/${requestId}",
+      "methodFilter": ".*",
+      "requestTopicExpression":  "v1/device/${deviceName}/request/${methodName}/${requestId}",
+      "responseTopicExpression": "v1/device/${deviceName}/response/${methodName}/${requestId}",
       "responseTimeout": 10000,
-      "valueExpression": "${params}"
-    },
-    {
-      "deviceNameFilter": ".*",
-      "methodFilter": "no-reply",
-      "requestTopicExpression": "sensor/${deviceName}/request/${methodName}/${requestId}",
       "valueExpression": "${params}"
     }
   ]

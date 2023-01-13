@@ -1,7 +1,27 @@
 {
+  "${serialNumber}": [
+    "MQTT Broker Connector",
+    "${sensorType}"
+  ],
+  "Group-Led-1": [
+    "MQTT Broker Connector",
+    "default"
+  ],
+  "Group-Led-2": [
+    "MQTT Broker Connector",
+    "default"
+  ],
+  "Group-Led-3": [
+    "MQTT Broker Connector",
+    "default"
+  ],
   "SN-001": [
     "MQTT Broker Connector",
     "Thermometer"
+  ],
+  "Update-Device": [
+    "MQTT Broker Connector",
+    "default"
   ],
   "Viet Gateway test": [
     "MQTT Broker Connector",

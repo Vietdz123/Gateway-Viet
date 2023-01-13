@@ -1,5 +1,5 @@
 thingsboard:
-  host: 127.0.0.1
+  host: 18.142.122.22
   port: 1883
   remoteShell: false
   remoteConfiguration: false
@@ -17,7 +17,7 @@ thingsboard:
     inactivityTimeoutSeconds: 120
     inactivityCheckPeriodSeconds: 10
   security:
-    accessToken: JtVfBoEADd56LDfS2B6P
+    accessToken: 4AfxcTtovGF8LdOzgRQS
   qos: 1
 storage:
   type: memory
