@@ -13,7 +13,7 @@ import serial
 import re
 
 broker = "127.0.0.1"
-port = 1884
+port = 1885
 
 TELEMETRY = "v1/devices/me/telemetry"
 ATTRIBUTE = "v1/devices/me/attributes"
@@ -30,12 +30,11 @@ serialNumber = "serialNumber"
 sensorTypeKey = "sensorType"
 
 z1baudrate = 38400
-z1port = '/dev/pts/3'
+z1port = '/dev/ttyUSB0'
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Helpers
-def pushUpdateConfigureToThingsboard(TY, ID ,ON, DI,  TI, SE) :
+def pushUpdateConfigureToThingsboard(ID ,ON, DI,  TI, SE) :
     payload = default_messase_Group1()
-    payload = add_json('TY', str(TY), payload)
     payload = add_json('ID', str(ID), payload)
     payload = add_json('ON', str(ON), payload)
     payload = add_json('DI', str(DI), payload)
@@ -155,10 +154,10 @@ def run_uart(client: mqtt_client) :
                     data_uart = z1serial.readline(size)
                     data_uart = data_uart.decode()
                     print(data_uart)
-                    
+
                     data_uart_dic = json.loads(data_uart)
-                    if data_uart.count('ID') != 0 and "TY" in data_uart and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
-                        payload = pushUpdateConfigureToThingsboard(data_uart_dic["TY"], data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
+                    if data_uart.count('ID') != 0 and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
+                        payload = pushUpdateConfigureToThingsboard(data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"])
                         
                         client.publish(TELEMETRY, payload)
 
@@ -194,6 +193,14 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             client.publish(responce, payload)
 
             print('Set information: ' + payload)
+
+            payload = "{}"
+            payload = add_json('TY', y["params"]["TY"], payload)
+            payload = add_json('ID', y["params"]["ID"], payload)
+            payload = add_json('EX', str(y["params"]["EX"]), payload)
+
+            payload.replace(" ", "")
+            print(payload)
             payload = payload.encode("utf-8")
             serial_uart.write(payload)
             
@@ -214,8 +221,17 @@ def respond_message(z: str, y: dict, responce: str, client: mqtt_client):
             
             client.publish(TELEMETRY, payload)
             client.publish(responce, payload)
-
             print('Set configuration: ' + payload)
+
+            payload = "{}"
+            payload = add_json('TY', y["params"]["TY"], payload)
+            payload = add_json('ID', y["params"]["ID"], payload)
+            payload = add_json('ON', y["params"]["ON"], payload)
+            payload = add_json('DI', y["params"]["DI"], payload)
+            payload = add_json('TI', y["params"]["TI"], payload)
+            payload.replace(" ", "")
+            print(payload)
+
             payload = payload.encode("utf8")
             serial_uart.write(payload)
             
@@ -303,7 +319,7 @@ def default_messase_Group1() :
 
 def connect_mqtt() -> mqtt_client:
     uart = mqtt_client.Client()  
-    uart.connect('127.0.0.1', 1884)
+    uart.connect(broker, port)
     return uart
 
 def run(client: mqtt_client) :
