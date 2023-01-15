@@ -23,8 +23,10 @@ class ThingsboardGateway :
     inf = 'inf'
     conf = 'conf'
     pin = 'pin'
+    params = "params"
 
     Group_Led = ["Group-Led-1", "Group-Led-2"]
+    ID_Led = [0, 1]
 
     sensorTypeValue = "default"
     serialNumber = "serialNumber"
@@ -33,48 +35,95 @@ class ThingsboardGateway :
     z1baudrate = 38400
     z1port = '/dev/pts/3'
 
-    ID_Led = [0, 1]
-
     client: mqtt_client
 
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Convert Data
     def pushUpdateConfigureToThingsboard(self, ID, ON, DI,  TI, SE, nameGroup) :
-        print("pushUpdateConfigureToThingsboard")
         payload = self.initGroup(nameGroup)
-        payload = self.add_json('ID', str(ID), payload)
-        payload = self.add_json('ON', str(ON), payload)
-        payload = self.add_json('DI', str(DI), payload)
-        payload = self.add_json('TI', str(TI), payload)
-        payload = self.add_json('SE', str(SE), payload)
+        if ID != None:
+            payload = self.add_json('ID', str(ID), payload)
+        if ON != None:
+            payload = self.add_json('ON', str(ON), payload)
+        if DI != None:
+            payload = self.add_json('DI', str(DI), payload)
+        if TI != None:
+            payload = self.add_json('TI', str(TI), payload)
+        if SE != None:
+            payload = self.add_json('SE', str(SE), payload)
         return payload 
 
-    def pushUpdateConfigureToDevice(self, TY, ID , ON, DI,  TI, nameGroup) :
-        print("pushUpdateConfigureToDevice")
-        payload = self.initGroup(nameGroup)
-        payload = self.add_json('TY', str(TY), payload)
-        payload = self.add_json('ID', str(ID), payload)
-        payload = self.add_json('ON', str(ON), payload)
-        payload = self.add_json('DI', str(DI), payload)
-        payload = self.add_json('TI', str(TI), payload)
-        return payload      
-
-    def pushUpdateInformationToDevice(self, TY, ID, EX, nameGroup) :
-        payload = self.initGroup(nameGroup)
-        payload = self.add_json('TY', str(TY), payload)
-        payload = self.add_json('ID', str(ID), payload)
-        payload = self.add_json('EX', str(EX), payload)
-        print(payload)
-        return payload  
-
-    def default_notValid(self, responce, nameGroup, client: mqtt_client) :
+    def pushUpdateConfigureToDevice(self, TY, ID, ON, DI, TI) :
         payload = self.init_responce()
+        if ID != None:
+            payload = self.add_json('ID', str(ID), payload)
+        if ON != None:
+            payload = self.add_json('ON', str(ON), payload)
+        if DI != None:
+            payload = self.add_json('DI', str(DI), payload)
+        if TI != None:
+            payload = self.add_json('TI', str(TI), payload)
+        if TY != None:
+            payload = self.add_json('TY', str(TY), payload)
+        payload = payload.replace(" ", "")
+        return payload 
+
+    def respondUpdateConfigureToDevice(self, TY, ID, ON, DI, TI, nameGroup) :
+        payload = self.initGroup(nameGroup)
+        if ID != None:
+            payload = self.add_json('ID', str(ID), payload)
+        if ON != None:
+            payload = self.add_json('ON', str(ON), payload)
+        if DI != None:
+            payload = self.add_json('DI', str(DI), payload)
+        if TI != None:
+            payload = self.add_json('TI', str(TI), payload)
+        if TY != None:
+            payload = self.add_json('TY', str(TY), payload)
+        return payload       
+
+    def respondUpdateInformationToDevice(self, TY, ID, EX, nameGroup) :
+        payload = self.initGroup(nameGroup)
+        if ID != None:
+            payload = self.add_json('ID', str(ID), payload)
+        if TY != None:
+            payload = self.add_json('TY', str(TY), payload)
+        if EX != None:
+            payload = self.add_json('EX', str(EX), payload)
+        return payload
+
+    def pushUpdateInformationToDevice(self, TY, ID, EX) :
+        payload = self.init_responce()
+        if ID != None:
+            payload = self.add_json('ID', str(ID), payload)
+        if TY != None:
+            payload = self.add_json('TY', str(TY), payload)
+        if EX != None:
+            payload = self.add_json('EX', str(EX), payload)
+        payload = payload.replace(" ", "")
+        print(payload)
+        return payload    
+
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Responce Not Valid Message
+    def defaultJsonnotValid(self, responce, nameGroup, client: mqtt_client) :
+        payload = self.initGroup(nameGroup)
         payload = self.add_json(self.serialNumber, nameGroup, payload)
         payload = self.add_json(self.sensorTypeKey, self.sensorTypeValue, payload)
         payload = self.add_json("Key", "Json", payload)
         payload = self.add_json("Valid", "Not", payload)
 
-        client.publish(self.ATTRIBUTE, payload)
-        client.publish(responce, payload)   
+        client.publish(responce, payload) 
 
+    def respondMessageNotValid(self, responce, nameGroup, message,client: mqtt_client) :
+        payload = self.initGroup(nameGroup)
+        payload = self.add_json(self.serialNumber, nameGroup, payload)
+        payload = self.add_json(self.sensorTypeKey, self.sensorTypeValue, payload)
+        payload = json.loads(payload)
+        payload.update(message)
+        payload = json.dumps(payload)
+
+        client.publish(responce, payload) 
+
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Check Valid Format Message
     def check_state(self, fullstring: str, substring: str) :  
         if fullstring.find(substring) != -1:
             fullstring = self.add_json("STATE", "ON", fullstring)
@@ -99,14 +148,52 @@ class ThingsboardGateway :
                 print("The message is not a valid JSON")
                 return None
 
+    def checkTypeMessage(self, ID = 0, TY = 5, ON = 1, DI = 30.8, TI = 10, EX = "0x12") : 
+        if EX != None:
+            EX = int(EX, 16)
+            EX = hex(EX)                 
+        if ID != None:    
+            if isinstance(ID, int) != True  :
+                return None
+        if TY != None: 
+            if isinstance(TY, int) != True :
+                return None
+        if ON != None: 
+            if isinstance(ON, int) != True :
+                return None
+        if DI != None: 
+            if isinstance(DI, (int, float)) != True :
+                return None
+        if TI != None: 
+            if isinstance(TI, int) != True :
+                return None 
+        return True               
+
+    def checkValidMessage(self, TY = 0, ON = 1, DI = 50.5, TI = 15, SE = 100) : 
+        if TY != None:
+            if TY != 0 and TY != 1 :
+                return None
+        if ON != None:
+            if ON != 0 and ON != 1 :
+                return None
+        if DI != None:
+            if DI < 0 or DI > 100:
+                return None
+        if TI != None:
+            if TI < 10 :
+                return None
+        if SE != None: 
+            if SE < 0:
+                return None
+        return True
+        
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Save Id, Convert ID To NameGroup, Convert NameGroup To ID
     def saveID(self, nameGroup: str, ID: int) :
-        print(nameGroup)
         for i in range(len(self.Group_Led)):
-            print(self.Group_Led[i])
             if self.Group_Led[i] == nameGroup :
                 for k in range(len(self.Group_Led)) : 
                     if k != i and self.ID_Led[k] == ID :    
-                        print("Exist ID")
+                        print("Cannot Save...Exist ID")
                         return None
                 print("Save success")
                 self.ID_Led[i] = ID
@@ -115,13 +202,15 @@ class ThingsboardGateway :
     def convertIDtoGroupLed(self, ID) :
         for i in range(len(self.ID_Led)):
             if self.ID_Led[i] == ID:
-                return self.Group_Led[i]      
+                return self.Group_Led[i]  
+        print("ID not Exist")    
     
     def convertGroupToID(self, nameGroup) : 
         for i in range(len(self.Group_Led)):
             if self.Group_Led[i] == nameGroup:
                 return self.ID_Led[i]      
 
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Helpers
     def init_responce(self) :
         payload = "{}"
         return payload
@@ -136,31 +225,6 @@ class ThingsboardGateway :
         python_object = json.loads(json_string)
         python_object['enabled'] = str(python_object['enabled']).lower()
         return python_object
-
-    def checkTypeMessage(self, ID = 0, TY = 5, ON = 1, DI = 30.8, TI = 10, EX = "0x12") : 
-        EX = int(EX, 16)
-        EX = hex(EX)                 # Check is hex or not
-        if isinstance(ID, int) and isinstance(TY, int) and isinstance(ON, int) and isinstance(DI, (float, int)) and isinstance(TI, int) :
-            return True
-        else :
-            return None
-
-    def checkValidMessage(self, TY = 0, ON = 1, DI = 50.5, TI = 15, SE = 100) : 
-        if TY != 0 and TY != 1 :
-            return None
-
-        if ON != 0 and ON != 1 :
-            return None
-
-        if DI < 0 or DI > 100:
-            return None
-        
-        if TI < 10 :
-            return None
-        
-        if SE < 0:
-            return None
-        return True
 
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> UART
     def config_uart(self) :
@@ -188,7 +252,6 @@ class ThingsboardGateway :
                         data_uart_dic = json.loads(data_uart)
                         if data_uart.count('ID') != 0 and "ON" in data_uart and "DI" in data_uart and "TI" in data_uart and "SE" in data_uart :
                             nameGroup = self.convertIDtoGroupLed(data_uart_dic["ID"])
-                            print("Name Group UART " )
                             payload = self.pushUpdateConfigureToThingsboard(data_uart_dic["ID"] , data_uart_dic["ON"], data_uart_dic["DI"], data_uart_dic["TI"], data_uart_dic["SE"], nameGroup)
                             
                             self.client.publish(self.TELEMETRY, payload)
@@ -205,90 +268,74 @@ class ThingsboardGateway :
             print ('z1serial not open')
 
 
-    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Hanlde Responce RPC To Thingsboard and Send Configure to Device
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Handle Responce RPC To Thingsboard and Send Configure to Device
     def respond_message(self, z: str, y: dict, nameGroup: str, responce: str, client: mqtt_client):
         try: 
-            if z.count(self.inf) != 0 and "TY" in z and "EX" in z and "ID" in z :
-                check = self.checkTypeMessage(ID = y["params"]["ID"], TY = y["params"]["TY"], EX = y["params"]["EX"])
+            if z.count(self.inf) != 0 and "ID" in z and "EX" in z:
+                TY = y.get(self.params).get("TY")
+                ID = y.get(self.params).get("ID")
+                EX = y.get(self.params).get("EX")
+
+                check = self.checkTypeMessage(ID = ID, TY = TY, EX = EX)
                 if check == None :
-                    self.default_notValid(responce, nameGroup,client)
+                    self.defaultJsonnotValid(responce, nameGroup, client)
                     return
-                check = self.checkValidMessage(TY = y["params"]["TY"])
+                check = self.checkValidMessage(TY = TY)
                 if check == None :
-                    self.default_notValid(responce, nameGroup, client)
+                    self.defaultJsonnotValid(responce, nameGroup, client)
                     return
-
-                check = self.saveID(nameGroup, y["params"]["ID"])
-                if check == None :
-                    print("None")
-                    self.default_notValid(responce, nameGroup,client) 
-                    return  
-
-                serial_uart = self.config_uart()
-                payload = self.pushUpdateInformationToDevice(y["params"]["TY"], y["params"]["ID"], y["params"]["EX"], nameGroup)
-
-                client.publish(self.TELEMETRY, payload)
-                client.publish(responce, payload)
-
-                print('Set information: ' + payload)
-
-                payload = "{}"
-                payload = self.add_json('TY', y["params"]["TY"], payload)
-                payload = self.add_json('ID', y["params"]["ID"], payload)
-                payload = self.add_json('EX', str(y["params"]["EX"]), payload)
-
-                payload.replace(" ", "")
-                print(payload)
-                payload = payload.encode("utf-8")
-                serial_uart.write(payload)
-                for element in self.ID_Led :
-                    print(element)
-
-
-                
-            #Dieu khien cac thong so cho Led
-            elif z.count(self.conf) != 0 and "TY" in z and "ID" in z and "ON" in z and "DI" in z and "TI" in z: 
-                TY = y["params"]["TY"]
-                ID = y["params"]["ID"]
-                ON = y["params"]["ON"]
-                DI = y["params"]["DI"]
-                TI = y["params"]["TI"]
 
                 check = self.saveID(nameGroup, ID)
                 if check == None :
-                    self.default_notValid(responce, nameGroup, client)
+                    self.defaultJsonnotValid(responce, nameGroup, client) 
                     return  
+
+                serial_uart = self.config_uart()
+                payload = self.respondUpdateInformationToDevice(TY, ID, EX, nameGroup)
+
+                client.publish(self.TELEMETRY, payload)
+                client.publish(responce, payload)
+                print('Set information: ' + payload)
+
+                payload = self.pushUpdateInformationToDevice(TY, ID, EX)
+                payload = payload.encode("utf-8")
+                serial_uart.write(payload)
+                for element in self.ID_Led :
+                    print("ID after save " + str(element))
+
+            #Dieu khien cac thong so cho Led
+            elif z.count(self.conf) != 0 and "ID" in z:       
+                TY = y.get(self.params).get("TY")
+                ID = y.get(self.params).get("ID")
+                ON = y.get(self.params).get("ON")
+                DI = y.get(self.params).get("DI")
+                TI = y.get(self.params).get("TI")
 
                 check = self.checkTypeMessage(ID, TY, ON, DI, TI)
                 if check == None :
-                    self.default_notValid(responce, nameGroup, client)
+                    self.defaultJsonnotValid(responce, nameGroup, client)
                     return
                 check = self.checkValidMessage(TY = TY, ON = ON, DI = DI, TI = TI)
                 if check == None :
-                    self.default_notValid(responce, nameGroup,client)
+                    self.defaultJsonnotValid(responce, nameGroup, client)
                     return
+                check = self.saveID(nameGroup, ID)
+                if check == None :
+                    self.defaultJsonnotValid(responce, nameGroup, client)
+                    return  
 
                 serial_uart = self.config_uart()
-                payload = self.pushUpdateConfigureToDevice(TY, ID, ON, DI, TI, nameGroup)
+                payload = self.respondUpdateConfigureToDevice(TY, ID, ON, DI, TI, nameGroup)
                 
                 self.client.publish(self.TELEMETRY, payload)
                 self.client.publish(responce, payload)
                 print('Set configuration: ' + payload)
 
-                payload = "{}"
-                payload = self.add_json('TY', y["params"]["TY"], payload)
-                payload = self.add_json('ID', y["params"]["ID"], payload)
-                payload = self.add_json('ON', y["params"]["ON"], payload)
-                payload = self.add_json('DI', y["params"]["DI"], payload)
-                payload = self.add_json('TI', y["params"]["TI"], payload)
-                payload.replace(" ", "")
-                print(payload)
-
+                payload = self.pushUpdateConfigureToDevice(TY, ID, ON, DI, TI)
                 payload = payload.encode("utf8")
                 serial_uart.write(payload)
                 for element in self.ID_Led :
-                    print(element)
-
+                    print("ID after save " + str(element))
                 
             #Dieu khien tat bat led
             elif z.count(self.pin) != 0 and "enabled" in z :           
@@ -320,44 +367,12 @@ class ThingsboardGateway :
                     print('payload_uart control led: ' + payload_uart)
                     payload_uart = payload_uart.encode("utf8")
                     serial_uart.write(payload_uart)                
-
-            #Dieu khien Dim Led
-            elif "dim" in y["method"] or y["method"].find("dim")!=-1 :
-                try :
-                    index = y["method"].find("dim")
-                    numberDim = y["method"][index+3:]
-                    numberDim = int(numberDim) 
-                    value_params = y["params"]
-
-                    value_params = float(value_params)
-                    a = isinstance(value_params, float)
-                    if a == True :
-                        serial_uart = self.config_uart()
-                        payload_responce_thingsboard = self.initGroup(nameGroup)
-                        payload_responce_thingsboard = self.add_json("ID", numberDim, payload_responce_thingsboard)
-                        payload_responce_thingsboard = self.add_json('DI', value_params, payload_responce_thingsboard)                    
-
-                        client.publish(self.TELEMETRY, payload_responce_thingsboard)  
-                        client.publish(responce, payload_responce_thingsboard)
-
-                        payload_uart = self.init_responce()
-                        payload_uart = self.add_json("ID", numberDim, payload_uart)
-                        payload_uart = self.add_json('DI', value_params, payload_uart)
-                        print('payload_uart control dim: ' + payload_uart)
-                        payload = payload_uart.encode("utf-8")
-                        serial_uart.write(payload) 
-                    
-                    else :
-                        self.default_notValid(responce, nameGroup,client)
-                
-                except :
-                    self.default_notValid(responce, nameGroup,client)
                             
             else :
-                self.default_notValid(responce, nameGroup,client)
+                self.defaultJsonnotValid(responce, nameGroup,client)
         
         except:
-            self.default_notValid(responce, nameGroup,client)     
+            self.defaultJsonnotValid(responce, nameGroup,client)     
 
 
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Connect Broker and Thingsboard
@@ -411,7 +426,7 @@ class ThingsboardGateway :
                 
                 self.respond_message(z, y, elementNameTopics[2],responce, client)
             else :
-                self.default_notValid(client, responce, elementNameTopics[2])
+                self.defaultJsonnotValid(responce, elementNameTopics[2], client)
 
         self.client.on_message = on_message
         self.client.subscribe(self.topic)
@@ -426,9 +441,7 @@ class ThingsboardGateway :
             self.client.publish(self.TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
             self.client.publish(self.TELEMETRY, '{"serialNumber": "Group-Led-2, "sensorType": "default", "trash": "trash"}')
         
-    def firstUartConnectToThingsboard(self) :
-        self.client.publish(self.topic_connect, thingboardGateway.connect_group1())
-        self.client.publish(self.TELEMETRY, '{"serialNumber": "Group-Led-1", "sensorType": "default", "trash": "trash"}')
+
 
     def excuteMultipleThread(self) :
         self.thread1 = threading.Thread(target=self.run, args=())
@@ -439,6 +452,7 @@ class ThingsboardGateway :
         self.thread3.start()
 
 
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Main
 if __name__ == '__main__':
     thingboardGateway = ThingsboardGateway()
     thingboardGateway.connect_mqtt()
