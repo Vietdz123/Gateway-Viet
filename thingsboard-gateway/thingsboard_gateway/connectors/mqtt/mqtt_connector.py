@@ -1,5 +1,3 @@
-
-
 #     Copyright 2022. ThingsBoard
 #
 #     Licensed under the Apache License, Version 2.0 (the "License");
@@ -228,6 +226,9 @@ class MqttConnector(Connector, Thread):
     def is_filtering_enable(self, device_name):
         return self.__send_data_only_on_change
 
+    def get_config(self):
+        return self.config
+    
     def get_ttl_for_duplicates(self, device_name):
         return self.__send_data_only_on_change_ttl
 
@@ -317,7 +318,6 @@ class MqttConnector(Connector, Thread):
         message = self._client.subscribe(topic, qos)
         try:
             self.__subscribes_sent[message[1]] = topic
-            print("Subcribe >>>>>>>>>>>>>>>>.")
         except Exception as e:
             self.__log.exception(e)
 
@@ -733,7 +733,7 @@ class MqttConnector(Connector, Thread):
     def __process_rpc_request(self, content, rpc_config):
         # This handler seems able to handle the request
         self.__log.info("Candidate RPC handler found")
-        print("HELLO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.")
+
         expects_response = rpc_config.get("responseTopicExpression")
         defines_timeout = rpc_config.get("responseTimeout")
 
@@ -810,7 +810,7 @@ class MqttConnector(Connector, Thread):
     @StatisticsService.CollectAllReceivedBytesStatistics(start_stat_type='allReceivedBytesFromTB')
     def server_side_rpc_handler(self, content):
         self.__log.info("Incoming server-side RPC: %s", content)
-        print("HAHAHA>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
         rpc_method = content['data']['method']
 
         # check if RPC method is reserved get/set
@@ -829,9 +829,9 @@ class MqttConnector(Connector, Thread):
         else:
             # Check whether one of my RPC handlers can handle this request
             for rpc_config in self.__server_side_rpc:
-                # if search(rpc_config["deviceNameFilter"], content["device"]) \
-                #         and search(rpc_config["methodFilter"], rpc_method) is not None:
-                    print("KAKAKAKAK >>>>>>>")
+                if search(rpc_config["deviceNameFilter"], content["device"]) \
+                        and search(rpc_config["methodFilter"], rpc_method) is not None:
+
                     return self.__process_rpc_request(content, rpc_config)
 
             self.__log.error("RPC not handled: %s", content)

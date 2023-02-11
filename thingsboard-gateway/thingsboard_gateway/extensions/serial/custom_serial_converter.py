@@ -14,6 +14,7 @@
 
 from thingsboard_gateway.connectors.converter import Converter, log
 
+
 class CustomSerialUplinkConverter(Converter):
     def __init__(self, config):
         self.__config = config

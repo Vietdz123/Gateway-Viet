@@ -2,9 +2,9 @@ sudo service mosquitto stop
 sudo systemctl stop mosquitto.service
 mosquitto -p 1884
 
+mosquitto_pub -h streetlighting.me -p 1883 -t "/sensor/data" -m '{"serialNumber": "SN-001", "sensorType": "Thermometer", "sensorModel": "T1000", "temp": 42, "hum": 58}'
 
-
-mosquitto_sub -t "v1/devices/me/telemetry" -p 1884
+mosquitto_sub -t "v1/devices/me/telemetry" -p 1884 '{"serialNumber": "Group-Led-1", "sensorType": "Thermometer", "TY": 1}'
 mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"inf","params":{"TY":0,"EX":"0x00","ID":0}}'
 mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"inf","params":{"TY":0,"EX":"0x00","ID":0}}'
 mosquitto_pub  -t "v1/devices/me/rpc/request/1" -p 1884 -m '{"method":"ControlLed","params":{"pin":3,"enabled":true}}'
@@ -48,9 +48,9 @@ mosquitto_pub  -t "v1/devices/me/rpc/response/+" -p 1884
 
 // Bản tin để gửi thông số đi
 
-Controlled {"method": "dim1", "params": 0.01}
-Controlled {"method": "inf", "params": {"TY":0,"EX":"0x00","ID":0}}
-Controlled {"method": "conf", "params": {"TY":2, "ID":0, "ON":"0", "DI":30, "TI":10}}
 
-echo  {\"TY\":2, \"ID\":0, \"ON\": 0, \"DI\":30, \"TI\":10, \"SE\":100} > /dev/pts/2
+Controlled {"method": "inf", "params": {"TY":0,"EX":"0x00","ID":0}}
+Controlled {"method": "conf", "params": {"TY":1, "ID":0, "ON":0, "DI":30, "TI":10}}
+
+echo  {\"ID\":0, \"ON\": 0, \"DI\":30, \"TI\":10, \"SE\":100, \"ADC\":30} > /dev/pts/2
 
