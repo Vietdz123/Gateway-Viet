@@ -74,6 +74,11 @@
           },
           {
             "type": "double",
+            "key": "ADC",
+            "value": "${ADC}"
+          },
+          {
+            "type": "double",
             "key": "ON",
             "value": "${ON}"
           },
@@ -94,7 +99,7 @@
           },          
           {
             "type": "string",
-            "key": "STATE",
+            "key": "State",
             "value": "${STATE}"
           },        
           {
@@ -217,14 +222,9 @@
       "methodFilter": ".*",
       "requestTopicExpression":  "v1/device/${deviceName}/request/${methodName}/${requestId}",
       "responseTopicExpression": "v1/device/${deviceName}/response/${methodName}/${requestId}",
-      "responseTimeout": 20000,
-      "valueExpression": "${params}"
-    },
-    {
-      "deviceNameFilter": ".*",
-      "methodFilter": "no-reply",
-      "requestTopicExpression": "v1/device/${deviceName}/request/${methodName}/${requestId}",
+      "responseTimeout": 10000,
       "valueExpression": "${params}"
     }
   ]
 }
+
