@@ -1,0 +1,229 @@
+{
+  "broker": {
+    "name": "Viet Local Broker",
+    "host": "127.0.0.1",
+    "port": 1884,
+    "clientId": "ThingsBoard_gateway",
+    "version": 5,
+    "maxMessageNumberPerWorker": 10,
+    "maxNumberOfWorkers": 100,
+    "sendDataOnlyOnChange": false,
+    "security": {
+      "type": "basic",
+      "username": "user",
+      "password": "password"
+    }
+  },
+  "mapping": [
+    {
+      "topicFilter": "v1/devices/me/telemetry",
+      "converter": {
+        "type": "json",
+        "deviceNameJsonExpression": "${serialNumber}",
+        "deviceTypeJsonExpression": "${sensorType}",
+        "sendDataOnlyOnChange": false,
+        "timeout": 60000,
+        "attributes": [
+          {
+            "type": "string",
+            "key": "1",
+            "value": "${enabled1}"
+          },
+          {
+            "type": "string",
+            "key": "2",
+            "value": "${enabled2}"
+          },
+          {
+            "type": "string",
+            "key": "3",
+            "value": "${enabled3}"
+          },
+          {
+            "type": "string",
+            "key": "4",
+            "value": "${enabled4}"
+          },
+          {
+            "type": "string",
+            "key": "5",
+            "value": "${enabled5}"
+          },
+          {
+            "type": "string",
+            "key": "6",
+            "value": "${enabled6}"
+          }
+          
+        ],
+        "timeseries": [
+          {
+            "type": "double",
+            "key": "Type",
+            "value": "${TY}"
+          },
+          {
+            "type": "string",
+            "key": "Extended Address",
+            "value": "${EX}"
+          },
+          {
+            "type": "double",
+            "key": "ID",
+            "value": "${ID}"
+          },
+          {
+            "type": "double",
+            "key": "ADC",
+            "value": "${ADC}"
+          },
+          {
+            "type": "double",
+            "key": "ON",
+            "value": "${ON}"
+          },
+          {
+            "type": "double",
+            "key": "Dim",
+            "value": "${DI}"
+          },
+          {
+            "type": "double",
+            "key": "Time",
+            "value": "${TI}"
+          },
+          {
+            "type": "string",
+            "key": "Sensor",
+            "value": "${SE}"
+          },          
+          {
+            "type": "string",
+            "key": "State",
+            "value": "${STATE}"
+          },        
+          {
+            "type": "string",
+            "key": "trash",
+            "value": "${trash}"
+          }                                              
+
+        ]
+      }
+    },
+    {
+      "topicFilter": "/sensor/+/data",
+      "converter": {
+        "type": "json",
+        "deviceNameTopicExpression": "(?<=sensor\/)(.*?)(?=\/data)",
+        "deviceTypeTopicExpression": "Thermometer",
+        "sendDataOnlyOnChange": false,
+        "timeout": 60000,
+        "attributes": [
+          {
+            "type": "string",
+            "key": "model",
+            "value": "${sensorModel}"
+          }
+        ],
+        "timeseries": [
+          {
+            "type": "double",
+            "key": "temperature",
+            "value": "${temp}"
+          },
+          {
+            "type": "double",
+            "key": "humidity",
+            "value": "${hum}"
+          }
+        ]
+      }
+    },
+    {
+      "topicFilter": "/sensor/raw_data",
+      "converter": {
+        "type": "bytes",
+        "deviceNameExpression": "[0:4]",
+        "deviceTypeExpression": "default",
+        "sendDataOnlyOnChange": false,
+        "timeout": 60000,
+        "attributes": [
+          {
+            "type": "raw",
+            "key": "rawData",
+            "value": "[:]"
+          }
+        ],
+        "timeseries": [
+          {
+            "type": "raw",
+            "key": "temp",
+            "value": "[4:]"
+          }
+        ]
+      }
+    },
+    {
+      "topicFilter": "/custom/sensors/+",
+      "converter": {
+        "type": "custom",
+        "extension": "CustomMqttUplinkConverter",
+        "extension-config": {
+          "temperatureBytes": 2,
+          "humidityBytes": 2,
+          "batteryLevelBytes": 1
+        }
+      }
+    }
+  ],
+  "connectRequests": [
+    {
+      "topicFilter": "sensor/connect",
+      "deviceNameJsonExpression": "${SerialNumber}"
+    },
+    {
+      "topicFilter": "sensor/+/connect",
+      "deviceNameTopicExpression": "(?<=sensor\/)(.*?)(?=\/connect)"
+    }
+  ],
+  "disconnectRequests": [
+    {
+      "topicFilter": "sensor/disconnect",
+      "deviceNameJsonExpression": "${SerialNumber}"
+    },
+    {
+      "topicFilter": "sensor/+/disconnect",
+      "deviceNameTopicExpression": "(?<=sensor\/)(.*?)(?=\/disconnect)"
+    }
+  ],
+  "attributeRequests": [
+    {
+      "retain": false,
+      "topicFilter": "v1/devices/me/attributes/request",
+      "deviceNameJsonExpression": "${serialNumber}",
+      "attributeNameJsonExpression": "${versionAttribute}, ${pduAttribute}",
+      "topicExpression": "devices/${deviceName}/attrs",
+      "valueExpression": "${attributeKey}: ${attributeValue}"
+    }
+  ],
+  "attributeUpdates": [
+    {
+      "retain": true,
+      "deviceNameFilter": "SmartMeter.*",
+      "attributeFilter": "uploadFrequency",
+      "topicExpression": "sensor/${deviceName}/${attributeKey}",
+      "valueExpression": "{\"${attributeKey}\":\"${attributeValue}\"}"
+    }
+  ],
+  "serverSideRpc": [
+    {
+      "deviceNameFilter": ".*",
+      "methodFilter": ".*",
+      "requestTopicExpression":  "v1/device/${deviceName}/request/${methodName}/${requestId}",
+      "responseTopicExpression": "v1/device/${deviceName}/response/${methodName}/${requestId}",
+      "responseTimeout": 10000,
+      "valueExpression": "${params}"
+    }
+  ]
+}
