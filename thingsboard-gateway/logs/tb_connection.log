@@ -161,3 +161,4 @@
 ""2023-02-12 09:44:55" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 137 for device *"
 ""2023-02-12 09:44:57" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 138 for device *"
 ""2023-02-12 09:44:59" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 139 for device *"
+""2023-02-12 09:50:46" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_unsubscribe - 193 - Unsubscribed from *|*, subscription id '*'"

@@ -174,7 +174,7 @@ class ThingsboardGateway :
             if isinstance(TI, int) != True :
                 return None 
         if SE != None: 
-            if isinstance(TI, int) != True :
+            if isinstance(SE, (int, float)) != True :
                 return None             
         return True               
 

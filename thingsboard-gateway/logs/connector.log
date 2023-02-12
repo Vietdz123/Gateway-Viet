@@ -2620,3 +2620,4 @@
 ""2023-02-12 09:48:49" - |INFO| - [mqtt_connector.py] - mqtt_connector - _process_on_message - 559 - Connecting device Group-Led-2 of type default"
 ""2023-02-12 09:49:09" - |INFO| - [mqtt_connector.py] - mqtt_connector - _process_on_message - 559 - Connecting device Group-Led-1 of type default"
 ""2023-02-12 09:49:09" - |INFO| - [mqtt_connector.py] - mqtt_connector - _process_on_message - 559 - Connecting device Group-Led-2 of type default"
+""2023-02-12 09:50:46" - |INFO| - [mqtt_connector.py] - mqtt_connector - close - 312 - MQTT Broker Connector has been stopped."
