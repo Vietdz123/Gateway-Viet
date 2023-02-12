@@ -1,0 +1,19 @@
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 09:54:12" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 09:54:12" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 09:54:35" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 115"
+""2023-02-12 09:54:36" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 116"
