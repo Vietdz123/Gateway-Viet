@@ -2,7 +2,7 @@
   "broker": {
     "name": "Viet Local Broker",
     "host": "127.0.0.1",
-    "port": 1884,
+    "port": 1883,
     "clientId": "ThingsBoard_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
@@ -54,7 +54,6 @@
             "key": "6",
             "value": "${enabled6}"
           }
-          
         ],
         "timeseries": [
           {
@@ -96,18 +95,17 @@
             "type": "string",
             "key": "Sensor",
             "value": "${SE}"
-          },          
+          },
           {
             "type": "string",
             "key": "State",
             "value": "${STATE}"
-          },        
+          },
           {
             "type": "string",
             "key": "trash",
             "value": "${trash}"
-          }                                              
-
+          }
         ]
       }
     },
@@ -220,7 +218,7 @@
     {
       "deviceNameFilter": ".*",
       "methodFilter": ".*",
-      "requestTopicExpression":  "v1/device/${deviceName}/request/${methodName}/${requestId}",
+      "requestTopicExpression": "v1/device/${deviceName}/request/${methodName}/${requestId}",
       "responseTopicExpression": "v1/device/${deviceName}/response/${methodName}/${requestId}",
       "responseTimeout": 10000,
       "valueExpression": "${params}"

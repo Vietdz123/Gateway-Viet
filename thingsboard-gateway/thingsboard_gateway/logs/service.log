@@ -1,0 +1,58 @@
+""2023-02-18 18:32:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-18 18:32:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-18 18:32:47" - |ERROR| - [tb_loader.py] - tb_loader - import_module - 75 - 'type' object is not subscriptable"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_loader.py", line 65, in import_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt/mqtt_connector.py", line 27, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_connector import GwGrpcConnector, log
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_connector.py", line 23, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_client import GrpcClient
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_client.py", line 24, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_msg_creator import GrpcMsgCreator
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 42, in <module>
+    class GrpcMsgCreator:
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 253, in GrpcMsgCreator
+    def create_attributes_request_connector_msg(device, keys: list[str], client_scope=False, request_id=None,
+TypeError: 'type' object is not subscriptable
+""2023-02-18 18:32:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-18 18:32:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-18 18:32:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-18 18:32:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-18 18:32:47" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-18 18:32:48" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-18 18:32:48" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-18 18:33:10" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-18 18:33:10" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-18 18:33:11" - |ERROR| - [tb_gateway_service.py] - tb_gateway_service - __close_connectors - 409 - 'GatewayManager' object has no attribute 'shutdown'"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 406, in __close_connectors
+    self.available_connectors[current_connector].close()
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt/mqtt_connector.py", line 311, in close
+    self._client.loop_stop()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/paho/mqtt/client.py", line 1813, in loop_stop
+    self._thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 150, in <lambda>
+    signal(SIGINT, lambda _, __: self.__stop_gateway())
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/gateway/tb_gateway_service.py", line 426, in __stop_gateway
+    self.manager.shutdown()
+AttributeError: 'GatewayManager' object has no attribute 'shutdown'
+""2023-02-18 18:33:11" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."

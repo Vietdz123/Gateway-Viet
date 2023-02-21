@@ -1,0 +1,216 @@
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import GrpcMqttConnector from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/viet/Desktop/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 09:54:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 09:54:12" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 09:54:12" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 09:54:35" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 115"
+""2023-02-12 09:54:36" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 116"
+""2023-02-12 07:00:31" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 07:00:31" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 07:00:31" - |ERROR| - [tb_loader.py] - tb_loader - import_module - 75 - 'type' object is not subscriptable"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_loader.py", line 65, in import_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt/mqtt_connector.py", line 27, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_connector import GwGrpcConnector, log
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_connector.py", line 23, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_client import GrpcClient
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_client.py", line 24, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_msg_creator import GrpcMsgCreator
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 42, in <module>
+    class GrpcMsgCreator:
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 253, in GrpcMsgCreator
+    def create_attributes_request_connector_msg(device, keys: list[str], client_scope=False, request_id=None,
+TypeError: 'type' object is not subscriptable
+""2023-02-12 07:00:31" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:00:31" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 07:00:31" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:00:31" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:00:31" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 07:00:32" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 07:00:32" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 07:04:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-12 07:04:32" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-12 07:06:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 07:06:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 07:06:38" - |ERROR| - [tb_loader.py] - tb_loader - import_module - 75 - 'type' object is not subscriptable"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_loader.py", line 65, in import_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt/mqtt_connector.py", line 27, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_connector import GwGrpcConnector, log
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_connector.py", line 23, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_client import GrpcClient
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_client.py", line 24, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_msg_creator import GrpcMsgCreator
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 42, in <module>
+    class GrpcMsgCreator:
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 253, in GrpcMsgCreator
+    def create_attributes_request_connector_msg(device, keys: list[str], client_scope=False, request_id=None,
+TypeError: 'type' object is not subscriptable
+""2023-02-12 07:06:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:06:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:06:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:06:38" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 07:06:38" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 07:06:40" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 07:06:40" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 07:09:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-12 07:09:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-12 07:23:14" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 07:23:14" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 07:23:14" - |ERROR| - [tb_loader.py] - tb_loader - import_module - 75 - 'type' object is not subscriptable"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_loader.py", line 65, in import_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt/mqtt_connector.py", line 27, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_connector import GwGrpcConnector, log
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_connector.py", line 23, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_client import GrpcClient
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_client.py", line 24, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_msg_creator import GrpcMsgCreator
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 42, in <module>
+    class GrpcMsgCreator:
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 253, in GrpcMsgCreator
+    def create_attributes_request_connector_msg(device, keys: list[str], client_scope=False, request_id=None,
+TypeError: 'type' object is not subscriptable
+""2023-02-12 07:23:14" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:23:14" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 07:23:14" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:23:14" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:23:14" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 07:23:16" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 07:23:16" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 07:23:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-12 07:23:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-12 07:23:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 414 - Stopping..."
+""2023-02-12 07:23:23" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __stop_gateway - 423 - The gateway has been stopped."
+""2023-02-12 07:24:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 178 - Gateway starting..."
+""2023-02-12 07:24:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 183 - ThingsBoard IoT gateway version: 3.2"
+""2023-02-12 07:24:25" - |ERROR| - [tb_loader.py] - tb_loader - import_module - 75 - 'type' object is not subscriptable"
+Traceback (most recent call last):
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/tb_utility/tb_loader.py", line 65, in import_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/mqtt/mqtt_connector.py", line 27, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_connector import GwGrpcConnector, log
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_connector.py", line 23, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_client import GrpcClient
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_client.py", line 24, in <module>
+    from thingsboard_gateway.grpc_connectors.gw_grpc_msg_creator import GrpcMsgCreator
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 42, in <module>
+    class GrpcMsgCreator:
+  File "/home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/grpc_connectors/gw_grpc_msg_creator.py", line 253, in GrpcMsgCreator
+    def create_attributes_request_connector_msg(device, keys: list[str], client_scope=False, request_id=None,
+TypeError: 'type' object is not subscriptable
+""2023-02-12 07:24:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import MqttConnector from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:24:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - __init__ - 298 - Gateway started."
+""2023-02-12 07:24:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import JsonMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:24:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import BytesMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/connectors/mqtt."
+""2023-02-12 07:24:25" - |INFO| - [tb_loader.py] - tb_loader - import_module - 68 - Import CustomMqttUplinkConverter from /home/ubuntu/huy/Gateway-Viet/thingsboard-gateway/thingsboard_gateway/extensions/mqtt."
+""2023-02-12 07:24:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 07:24:26" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 07:25:05" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 1"
+""2023-02-12 07:25:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 2"
+""2023-02-12 07:26:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 3"
+""2023-02-12 07:26:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 4"
+""2023-02-12 07:30:46" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 8"
+""2023-02-12 07:36:03" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 5"
+""2023-02-12 07:37:25" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 9"
+""2023-02-12 07:37:28" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 7"
+""2023-02-12 07:37:50" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 8"
+""2023-02-12 07:44:59" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 11"
+""2023-02-12 07:45:03" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 12"
+""2023-02-12 07:45:58" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 11"
+""2023-02-12 07:53:36" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 14"
+""2023-02-12 07:53:39" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 15"
+""2023-02-12 07:53:44" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 14"
+""2023-02-12 07:53:51" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 15"
+""2023-02-12 07:53:55" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 16"
+""2023-02-12 07:53:57" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 17"
+""2023-02-12 07:54:01" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 18"
+""2023-02-12 07:54:08" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 19"
+""2023-02-12 07:54:57" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 21"
+""2023-02-12 07:55:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 23"
+""2023-02-12 07:55:31" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 24"
+""2023-02-12 07:55:36" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 25"
+""2023-02-12 07:55:39" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 26"
+""2023-02-12 07:56:15" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 16"
+""2023-02-12 07:56:45" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 30"
+""2023-02-12 07:56:47" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 31"
+""2023-02-12 07:59:17" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 32"
+""2023-02-12 08:00:21" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 34"
+""2023-02-12 08:01:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 36"
+""2023-02-12 08:04:09" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 37"
+""2023-02-12 08:04:14" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-2, ID: 17"
+""2023-02-12 08:04:24" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 38"
+""2023-02-12 08:11:40" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 39"
+""2023-02-12 08:18:14" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 40"
+""2023-02-12 08:18:29" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 41"
+""2023-02-12 08:19:03" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 42"
+""2023-02-12 08:24:27" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 08:24:27" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"
+""2023-02-12 09:18:34" - |INFO| - [tb_gateway_service.py] - tb_gateway_service - rpc_with_reply_processing - 1097 - Outgoing RPC. Device: Group-Led-1, ID: 44"
+""2023-02-12 09:24:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 86 - v3.2"
+""2023-02-12 09:24:29" - |INFO| - [tb_updater.py] - tb_updater - check_for_new_version - 88 - 
+
+[===UPDATE===]
+
+ New version v3.2 is available! 
+
+[===UPDATE===]
+"

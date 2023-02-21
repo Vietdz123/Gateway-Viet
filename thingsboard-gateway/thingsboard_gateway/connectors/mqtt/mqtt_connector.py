@@ -98,6 +98,9 @@ RESULT_CODES_V5 = {
 
 
 class MqttConnector(Connector, Thread):
+    #this shit is for bug patching only, doenst know the cause
+    bugPatcher = 0    
+    #bug patch only
     def __init__(self, gateway, config, connector_type):
         super().__init__()
 
@@ -479,6 +482,7 @@ class MqttConnector(Connector, Thread):
 
     def _process_on_message(self):
         while not self.__stopped:
+            
             if not self._on_message_queue.empty():
                 client, userdata, message = self._on_message_queue.get()
 
@@ -487,7 +491,7 @@ class MqttConnector(Connector, Thread):
 
                 # Check if message topic exists in mappings "i.e., I'm posting telemetry/attributes" -------------------
                 topic_handlers = [regex for regex in self.__mapping_sub_topics if fullmatch(regex, message.topic)]
-
+                
                 if topic_handlers:
                     # Note: every topic may be associated to one or more converter.
                     # This means that a single MQTT message
@@ -666,9 +670,17 @@ class MqttConnector(Connector, Thread):
 
                 # Check if message topic exists in RPC handlers --------------------------------------------------------
                 # The gateway is expecting for this message => no wildcards here, the topic must be evaluated as is
+                 
 
                 if self.__gateway.is_rpc_in_progress(message.topic):
                     log.info("RPC response arrived. Forwarding it to thingsboard.")
+
+                    #this is for bug patch only
+
+                    self.bugPatcher = 1
+                    #bug patch
+
+
                     self.__gateway.rpc_with_reply_processing(message.topic, content)
                     continue
 
@@ -792,10 +804,20 @@ class MqttConnector(Connector, Thread):
         data_to_send = rpc_config.get('valueExpression')
         for (tag, value) in zip(data_to_send_tags, data_to_send_values):
             data_to_send = data_to_send.replace('${' + tag + '}', simplejson.dumps(value))
-
         try:
             self.__log.info("Publishing to: %s with data %s", request_topic, data_to_send)
-            self._publish(request_topic, data_to_send, rpc_config.get('retain', False))
+
+        
+        #THIS SECTION IS BUG PATCHER
+            self.bugPatcher = 0
+            while True:
+                self._publish(request_topic, data_to_send, False)
+                if(self.bugPatcher == 1):
+                    break
+                sleep(0.2)
+            print("BUG PATCHER")
+        #BUG PATCHER
+
 
             if not expects_response or not defines_timeout:
                 self.__log.info("One-way RPC: sending ack to ThingsBoard immediately")

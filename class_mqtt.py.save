@@ -15,6 +15,7 @@ import serial
 class ThingsboardGateway :
     broker = "127.0.0.1"
     port = 1883
+
     TELEMETRY = "v1/devices/me/telemetry"
     ATTRIBUTE = "v1/devices/me/attributes"
     topic_connect = "sensor/connect"
@@ -188,7 +189,7 @@ class ThingsboardGateway :
             if DI < 0 or DI > 100:
                 return None
         if TI != None:
-            if TI < 1 :
+            if TI < 10 :
                 return None
         if SE != None: 
             if SE < 0:
@@ -241,7 +242,7 @@ class ThingsboardGateway :
                                         bytesize=serial.EIGHTBITS,
                                         parity=serial.PARITY_NONE,
                                         stopbits=serial.STOPBITS_ONE,
-                                        timeout=None)
+                                        timeout=1)
         return serial_connection
 
     def run_uart(self) :
@@ -249,34 +250,34 @@ class ThingsboardGateway :
         
         if z1serial.is_open:
             while True:
-                # size = z1serial.inWaiting()
-                # if size:
-                try:
-                    data_uart = z1serial.readline()
-                    data_uart = data_uart.decode()
-                    print("Received data: " + data_uart + "\n")
-                    data_uart_dic = json.loads(data_uart)
-                    
-                    ID = data_uart_dic.get("ID")
-                    ON = data_uart_dic.get("ON")
-                    DI = data_uart_dic.get("DI")
-                    TI = data_uart_dic.get("TI")
-                    SE = data_uart_dic.get("SE")
+                size = z1serial.inWaiting()
+                if size:
+                    try:
+                        data_uart = z1serial.readline(size)
+                        data_uart = data_uart.decode()
 
-                    if data_uart.count('ID') != 0:
-                        nameGroup = self.convertIDtoGroupLed(ID)
-                        payload = self.pushUpdateConfigureToThingsboard(ID, ON, DI, TI, SE, nameGroup)
-                        payload = self.check_state(payload = payload, isTrue = ON)
-                        print(payload)
-                        self.client.publish(self.TELEMETRY, payload)
+                        data_uart_dic = json.loads(data_uart)
+                        
+                        ID = data_uart_dic.get("ID")
+                        ON = data_uart_dic.get("ON")
+                        DI = data_uart_dic.get("DI")
+                        TI = data_uart_dic.get("TI")
+                        SE = data_uart_dic.get("SE")
 
-                    else :
-                        print("Data Received Through UART Not Valid")              
-                except:
-                    print("Data Received Through UART Not Valid except")  
+                        if data_uart.count('ID') != 0:
+                            nameGroup = self.convertIDtoGroupLed(ID)
+                            payload = self.pushUpdateConfigureToThingsboard(ID, ON, DI, TI, SE, nameGroup)
+                            payload = self.check_state(payload = payload, isTrue = ON)
+                            print(payload)
+                            self.client.publish(self.TELEMETRY, payload)
 
-                # else :
-                #     time.sleep(0.5)
+                        else :
+                            print("Data Received Through UART Not Valid")              
+                    except:
+                        print("Data Received Through UART Not Valid except")  
+
+                else :
+                    time.sleep(1)
                     
         else:
             print ('z1serial not open')
@@ -371,7 +372,6 @@ class ThingsboardGateway :
                 payload_uart = self.init_responce()
                 ID = self.convertGroupToID(nameGroup)
                 payload_uart = self.add_json('ID', ID, payload_uart)
-                payload_uart = self.add_json("TY", 1, payload_uart)
 
                 if str(y["enabled"]) == "true" :
                     payload_uart = self.add_json("ON", 1, payload_uart)
@@ -431,21 +431,13 @@ class ThingsboardGateway :
 
     def subscribe(self):
         def on_message(client, userdata, msg):
-            rpcMessage = msg.payload.decode()
-            rpcMessage = rpcMessage.replace("\\", "")
-
-            if rpcMessage.startswith('"') and rpcMessage.endswith('"'):
-                rpcMessage = rpcMessage[1:-1]
-                
-            print(rpcMessage + '\n')
-
-            # print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic") 
-            isJson = self.is_json(rpcMessage)
+            print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic") 
+            isJson = self.is_json(msg.payload.decode())
             repsonTopic = str(msg.topic)
             responce =  repsonTopic.replace("request", "response")
             elementNameTopics = responce.split("/")
             if isJson == True :   
-                y = json.loads(rpcMessage)                         #convert sang json  
+                y = json.loads(msg.payload.decode())                         #convert sang json  
                 z = json.dumps(y)                                            #convert to string                       
 
                 self.respond_message(z, y, elementNameTopics[2],responce, client)

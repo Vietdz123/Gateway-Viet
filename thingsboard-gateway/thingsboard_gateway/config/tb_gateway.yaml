@@ -1,5 +1,5 @@
 thingsboard:
-  host: streetlighting.me
+  host: 192.168.1.9
   port: 1883
   remoteShell: false
   remoteConfiguration: false
@@ -20,7 +20,7 @@ thingsboard:
     inactivityTimeoutSeconds: 120
     inactivityCheckPeriodSeconds: 10
   security:
-    accessToken: xPY5JWVZ6INxtDWfTOgU
+    accessToken: X7TKVDQ4vX0tLvcWoq5Y
   qos: 1
 storage:
   type: memory

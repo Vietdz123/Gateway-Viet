@@ -6,5 +6,9 @@
   "Group-Led-2": [
     "MQTT Broker Connector",
     "default"
+  ],
+  "None": [
+    "MQTT Broker Connector",
+    "default"
   ]
 }

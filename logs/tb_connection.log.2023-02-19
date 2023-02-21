@@ -1,0 +1,7 @@
+""2023-02-18 17:41:29" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-02-18 17:41:30" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 2 for device *"
+""2023-02-18 17:52:45" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-02-18 18:22:10" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-02-19 05:22:24" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-02-19 07:49:30" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 1 for device *"
+""2023-02-19 07:49:30" - |INFO| - [tb_gateway_mqtt.py] - tb_gateway_mqtt - gw_subscribe_to_attribute - 185 - Subscribed to *|* with id 2 for device *"
