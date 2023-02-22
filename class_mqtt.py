@@ -11,6 +11,118 @@ import threading
 import time
 import serial
 
+class Wrapper :
+    # Sự khác nhau của bản tin gửi xuống Device và bản tin gui lên Thingsboard là: bản tin gửi lên Thingsboard thì cần thêm 2 trường là tên của Thiết bị và kiểu thiết bị 
+    # Các function nào có parameter là nameGroup thì 99% bản tin đó sẽ được gửi lên Thingssboard
+
+    # nhận bản tin từ Device, sau đó đóng gói bản tin gồm các parameters , bản tin sau đó được gửi lên Thingsboard Cloud
+    def pushUpdateConfigureToThingsboard(self, ID, ON, DI, TI, SE, nameGroup) :
+        print("Function")
+
+    # đóng gói bản tin gồm các parameters, bản tin sau đó gửi xuống Device
+    def pushUpdateConfigureToDevice(self, TY, ID, ON, DI, TI, SE) :
+        print("Function")
+
+    # nhận bản tin RPC từ Thingsboard, sau đó đóng gói thành bản tin gồm các parameters, bản tin sau đó được gửi len Thingsboard
+    def respondUpdateConfigureToDevice(self, TY, ID, ON, DI, TI, SE, nameGroup) :
+        print("Function")
+        
+    # nhận bản tin RPC từ Thingsboard, sau đó đóng gói thành bản tin gồm các parameters, bản tin sau đó được gửi len Thingsboard
+    def respondUpdateInformationToDevice(self, TY, ID, EX, nameGroup) : 
+        print("Function")
+
+    # nhận bản tin RPC từ Thingsboard, sau đó đóng gói thành bản tin gồm các parameters, bản tin sau đó được gửi xuong Device
+    def pushUpdateInformationToDevice(self, TY, ID, EX) :
+        print("Function")
+
+    # Function này sẽ check ON là 0 hay 1, nếu là 0 thì sẽ đính trường "STATE": "OFF" vao payload và ngược lại
+    def check_state(self, payload: str, isTrue: any) : 
+        print("Function")
+
+    # check bản tin có phải bản tin Json hay ko
+    def is_json(self, message) :
+        print("Function")
+
+    # check xem bản tin có phải kieu định dạng mong muốn hay ko, VD: TY phải là int, DIM có thể là float hoặc Int  
+    def checkValidMessage(self, TY = 0, ON = 1, DI = 50.5, TI = 15, SE = 100) : 
+        print("Function")
+
+    # check xem giá trị của các parameter có hợp lệ hay ko, VD ID phải > 0, DI phải < 100 và > 0
+    def checkTypeMessage(self, ID = 0, TY = 5, ON = 1, DI = 30.8, TI = 10, EX = "0x12", SE = 20) :     
+        print("Function")
+
+    # Lưu ID vào hệ thống, check ID xem đã tồn tại hay chưa, bla bla
+    def saveID(self, nameGroup: str, ID: int) :    
+        print("Function")
+
+    # Từ ID nhận được sẽ chuyển có được tên GroupLed, tên GroupLed được sửa dụng để đính kèm vào bản tin để gửi lên Thingsboard (Nói bên trên rồi đấy)
+    def convertIDtoGroupLed(self, ID) : 
+        print("Function")
+        
+    # Từ tên thiết bị truyền được, ta sẽ lấy được ID tương ứng của thiết bị ấy, cái này được sử dụng ở chỗ m dùng cái gpio chẳng hạn, bản tin gửi xuống ko có ID, chỉ có trường enabled
+    def convertGroupToID(self, nameGroup) : 
+        print("Function")
+
+    # Init 1 bản tin rỗng để response 
+    def init_responce(self) :
+        print("Function")
+
+    #  Add bản tin có key, value vào trong responce  
+    def add_json(self, key , value, responce: str):
+        print("Function")
+
+    # Init bản tin chứa tên thiết bị 
+    def initGroup(self, nameGroup) :
+        print("Function")
+
+    # Bản tin nhận được là True, t sẽ convert là true, vì cái gpio nó nhận true sẽ kéo cần ra, True thì ko kéo
+    def convert_boolean(self, json_string) : 
+        print("Function")
+
+    # Khởi tạo Serial để truyền nhận bản tin 
+    def config_uart(self) :
+        print("Function")
+
+    #  Function này có nhiệm vụ nhận, gửi bản tin tới thiết bị thông qua UART, chạy 1 thread khác
+    def run_uart(self) :
+        print("Function")
+        
+    # Xử lý mọi bản tin từ RPC từ Thingsboard gửi xuống, sau đó response và gửi xuống device
+    def respond_message(self, z: str, y: dict, nameGroup: str, responce: str, client: mqtt_client):
+        print("Function")
+
+    # Connect to broker    
+    def connect_mqtt(self) :
+        print("Function")
+        
+    # Khởi tạo bản tin chứa tên thiết bị ở Cloud và kiểu của thiết bị, hinh nhu cai nay t ko dung nua
+    def default_messase_Group1(self, nameGroup) : 
+        print("Function")
+    def default_messase_Group2(self) : 
+        print("Function")
+
+    # Khởi tạo một bản tin kết nối tới Group1 va 2 để truyền và nhận rpc  
+    def connect_group2(self) :
+        print("Function")
+    def connect_group1(self) :
+        print("Function")
+    # Subcribe topic RPC    
+
+    def subscribe(self):
+        print("Function")
+
+    # Nếu trong 1p or hơn mà ko gửi và nhận RPC nữa thì Gateway sẽ ngắt kết nối nhận RPC nữa, nên Function này để giữ kết nối RPC, cái này được chạy ở 1 thread khác
+    def keepConnectThingsboard(self) :
+        print("Function")
+
+    # Thi Run, chay o Thread Main :)))    
+    def run(self) :
+        print("Function")
+        
+    # Thực thi nhiều Thread cùng lúc    
+    def excuteMultipleThread(self) :
+        print("Function")
+
 #Newest
 class ThingsboardGateway :
     broker = "127.0.0.1"
