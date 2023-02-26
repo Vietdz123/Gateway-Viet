@@ -126,7 +126,7 @@ class Wrapper :
 #Newest
 class ThingsboardGateway :
     broker = "127.0.0.1"
-    port = 1883
+    port = 1884
     TELEMETRY = "v1/devices/me/telemetry"
     ATTRIBUTE = "v1/devices/me/attributes"
     topic_connect = "sensor/connect"
@@ -138,14 +138,14 @@ class ThingsboardGateway :
     params = "params"
 
     Group_Led = ["Group-Led-1", "Group-Led-2"]
-    ID_Led = [0, 1]
+    ID_Led = [200, 100]
 
     sensorTypeValue = "default"
     serialNumber = "serialNumber"
     sensorTypeKey = "sensorType"
 
     z1baudrate = 38400
-    z1port = '/dev/ttyS0'
+    z1port = '/dev/pts/6'
 
     client: mqtt_client
 
@@ -419,7 +419,6 @@ class ThingsboardGateway :
                 serial_uart = self.config_uart()
                 payload = self.respondUpdateInformationToDevice(TY, ID, EX, nameGroup)
 
-                client.publish(self.TELEMETRY, payload)
                 client.publish(responce, payload)
                 print('Set information: ' + payload)
 
@@ -455,7 +454,6 @@ class ThingsboardGateway :
                 payload = self.respondUpdateConfigureToDevice(TY, ID, ON, DI, TI, SE, nameGroup)
                 payload = self.check_state(payload, ON)
                 self.client.publish(self.TELEMETRY, payload)
-                self.client.publish(responce, payload)
                 print('Set configuration: ' + payload)
 
                 payload = self.pushUpdateConfigureToDevice(TY, ID, ON, DI, TI, SE)
@@ -477,7 +475,6 @@ class ThingsboardGateway :
                 payload = self.check_state(payload, str(y["enabled"]))  
                 print(payload)
                 client.publish(responce, payload)
-                client.publish(self.TELEMETRY, payload)
 
                 y  = self.convert_boolean(z)  
                 payload_uart = self.init_responce()
@@ -597,4 +594,3 @@ if __name__ == '__main__':
     thingboardGateway.subscribe()
     thingboardGateway.excuteMultipleThread()
     
-
