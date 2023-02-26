@@ -418,7 +418,6 @@ class ThingsboardGateway :
 
                 serial_uart = self.config_uart()
                 payload = self.respondUpdateInformationToDevice(TY, ID, EX, nameGroup)
-
                 client.publish(responce, payload)
                 print('Set information: ' + payload)
 
@@ -453,8 +452,8 @@ class ThingsboardGateway :
                 serial_uart = self.config_uart()
                 payload = self.respondUpdateConfigureToDevice(TY, ID, ON, DI, TI, SE, nameGroup)
                 payload = self.check_state(payload, ON)
-                self.client.publish(self.TELEMETRY, payload)
                 print('Set configuration: ' + payload)
+                client.publish(responce, payload)
 
                 payload = self.pushUpdateConfigureToDevice(TY, ID, ON, DI, TI, SE)
                 payload = payload.encode("utf8")
